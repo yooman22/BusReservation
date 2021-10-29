@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/yooma/AndroidStudioProjects/BusReservation/app/src/main/res/layout/activity_main.xml" value="0.11803444782168186" />
+        <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25885416666666666" />
+        <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/drawable/edge.xml" value="0.25885416666666666" />
+        <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/drawable/ic_launcher_background.xml" value="0.25885416666666666" />
+        <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -6,14 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/main_txt"
+            android:layout_width="256dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:text="Hello Bus"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:textFontWeight="@android:integer/config_longAnimTime"
+            android:layout_marginTop="160dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/main"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bus"
+            android:layout_marginTop="240dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RelativeLayout
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="400dp"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp">
+                <ImageView
+                    android:id="@+id/favor"
+                    android:src="@drawable/favourites"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"/>
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/favor"
+                    android:src="@drawable/booking" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/edge"
+            android:layout_marginTop="480dp"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp">
+                <ImageView
+                    android:id="@+id/booking"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/driver" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/booking"
+                    android:maxLines="1"
+                    android:text="버스기사용"
+                    android:textAlignment="center"
+                    android:textSize="30dp"></TextView>
+        </RelativeLayout>
+
+
 
 
 
