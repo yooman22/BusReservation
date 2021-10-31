@@ -45,6 +45,7 @@
                     android:layout_height="64dp"/>
 
                 <ImageView
+                    android:id="@+id/navi"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginLeft="20dp"
