@@ -16,14 +16,14 @@ class BusReservation : AppCompatActivity() {
                 R.style.ThemeOverlay_AppCompat
             )
         )
-        builder.setTitle("제목")
-        builder.setMessage("메시지 내용")
+        builder.setTitle("저상버스를 예약하시겠습니까?")
+        //builder.setMessage("메시지 내용")
         builder.setPositiveButton(
-            "확인"
+            "예"
         ) { dialog, id -> }
 
         builder.setNegativeButton(
-            "취소"
+            "아니오"
         ) { dialog, id -> }
         builder.show()
     }
