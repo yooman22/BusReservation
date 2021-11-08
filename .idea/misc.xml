@@ -9,6 +9,12 @@
         <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/drawable/ic_launcher_background.xml" value="0.25885416666666666" />
         <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/layout/activity_bus_reservation.xml" value="0.24270833333333333" />
         <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/drawable/edge.xml" value="0.16203703703703703" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_bus_reservation.xml" value="0.1519756838905775" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_departure.xml" value="0.16875" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_destination.xml" value="0.15416666666666667" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_find_path.xml" value="0.22" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
