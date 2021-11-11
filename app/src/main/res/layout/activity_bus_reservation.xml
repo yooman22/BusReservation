@@ -44,42 +44,68 @@
                 />
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/destination"
-            android:layout_width="170dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:text="목적지"
-            android:background="@drawable/edge"
-            android:textAlignment="center"
-            android:autoSizeTextType="uniform"
-            android:textFontWeight="@android:integer/config_longAnimTime"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/destination"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="목적지"
+                android:background="@drawable/edge"
+                android:textAlignment="center"
+                android:autoSizeTextType="uniform"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/destination_result"
-            android:layout_width="170dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
+            <TextView
+                android:id="@+id/destination_result"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edge"
+                android:textAlignment="center"
+                android:autoSizeTextType="uniform"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/bus_list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/reservation"
+            android:layout_marginTop="50dp"
             android:background="@drawable/edge"
-            android:textAlignment="center"
-            android:autoSizeTextType="uniform"
-            android:textFontWeight="@android:integer/config_longAnimTime"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+            <ImageView
+                android:layout_marginStart="100dp"
+                android:id="@+id/booking"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/driver" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/booking"
+                android:maxLines="1"
+                android:text="탑승 예약"
+                android:textAlignment="center"
+                android:textSize="30dp"></TextView>
+        </RelativeLayout>
 
     </LinearLayout>
-
-    </LinearLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
