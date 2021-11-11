@@ -15,6 +15,7 @@
         <activity
             android:name=".Destination"
             android:exported="false" />
+
         <activity
             android:name=".Departure"
             android:exported="false" />
