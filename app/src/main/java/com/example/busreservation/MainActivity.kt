@@ -27,6 +27,14 @@ class MainActivity : AppCompatActivity() {
             .enqueue(object : Callback<LoginVO>{
             override fun onResponse(call: Call<LoginVO>, response: Response<LoginVO>) {
                 Log.d("결과", "성공 : ${response.raw()}")
+                Log.d("결과", "성공 : ${response.body()?.result}")
+                response.body()?.let {
+                    var result = it.result
+
+                    Log.d("결과", "성공 : " + result )
+
+                }
+
             }
 
             override fun onFailure(call: Call<LoginVO>, t: Throwable) {

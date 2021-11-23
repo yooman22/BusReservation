@@ -3,6 +3,7 @@ package Network
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 
 object RetrofitClient {
     private var instance: Retrofit? = null
@@ -15,6 +16,7 @@ object RetrofitClient {
         if (instance == null) {
             instance = Retrofit.Builder()
                 .baseUrl(BASE_URL)
+                .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
         }
