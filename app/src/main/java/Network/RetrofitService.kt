@@ -2,7 +2,6 @@ package Network
 
 import VO.ListVO
 import VO.LoginVO
-import VO.data
 import com.google.gson.JsonArray
 import retrofit2.Call
 import retrofit2.http.Field

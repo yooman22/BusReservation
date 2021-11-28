@@ -11,11 +11,14 @@ data class LoginVO(
 
 data class ListVO(
     @SerializedName("Result")
-    var result : List<String>
+    var result : List<station>
 )
 
-public class data{
-    var stationName : List<String> = ArrayList<String>()
-}
+data class station(
+    @SerializedName("StationName")
+    var stationID : String,
+    @SerializedName("StationID")
+    var stationName : String
+)
 
 

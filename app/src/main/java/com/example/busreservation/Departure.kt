@@ -4,7 +4,7 @@ import Network.RetrofitClient
 import Network.RetrofitService
 import VO.ListVO
 import VO.LoginVO
-import VO.data
+import VO.station
 import android.R.attr
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -31,14 +31,13 @@ import android.widget.ListAdapter as ListAdapter1
 class Departure : AppCompatActivity() {
 
     var list = ArrayList<String>()
-
-    var result : ListVO = ListVO(list)
     var multiAdapter = Adapter(this)
 
     private lateinit var viewManager: RecyclerView.LayoutManager
     val datas1 = mutableListOf<DataItem>()
 
-    var departure_txt : ArrayList<String> = arrayListOf()
+    var departure_id_txt : ArrayList<String> = arrayListOf()
+    var departure_name_txt : ArrayList<String> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,12 +55,12 @@ class Departure : AppCompatActivity() {
                     Log.d("결과", "성공 : ${response.raw()}")
                     Log.d("결과", "성공 : ${response.body()?.result}")
                     response.body()?.let {
-                        result = it
+                        for(i in it.result) {
+                            departure_id_txt.add(i.stationID)
+                            departure_name_txt.add(i.stationName)
 
-                        for(i in result.result) {
-                            departure_txt.add(i)
                             Log.d("결과", "성공 : " + i)
-                            datas1.add(DataItem(i,i))
+                            datas1.add(DataItem(i.stationID,i.stationName))
                         }
 
                         multiAdapter.datas = datas1
