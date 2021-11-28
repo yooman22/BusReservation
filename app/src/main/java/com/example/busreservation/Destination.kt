@@ -10,6 +10,8 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_departure.*
 import kotlinx.android.synthetic.main.activity_destination.*
 import retrofit2.Call
@@ -17,6 +19,14 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class Destination : AppCompatActivity() {
+
+    var list = ArrayList<String>()
+
+    var result : ListVO = ListVO(list)
+    var multiAdapter = Adapter(this)
+
+    private lateinit var viewManager: RecyclerView.LayoutManager
+    val datas1 = mutableListOf<DataItem>()
 
     var destination_txt : ArrayList<String> = arrayListOf()
 
@@ -32,9 +42,10 @@ class Destination : AppCompatActivity() {
 
         var list = ArrayList<String>()
 
-        var result : ListVO = ListVO(list)
+        recyclerview_destination.adapter = multiAdapter
 
-        val adapter_destination = ArrayAdapter(this, android.R.layout.simple_list_item_1, destination_txt)
+        viewManager = LinearLayoutManager(this)
+        recyclerview_destination.layoutManager = viewManager
 
         val api = RetrofitClient.getInstance().create(RetrofitService::class.java)
         val callGetLogin = api.API_List("1")
@@ -48,10 +59,10 @@ class Destination : AppCompatActivity() {
                         for(i in result.result) {
                             destination_txt.add(i)
                             Log.d("결과", "성공 : " + i)
-                            adapter_destination.add(i)
+                            datas1.add(DataItem(i,i))
                         }
-                        destination_list.setAdapter(adapter_destination)
-
+                        multiAdapter.datas = datas1
+                        multiAdapter.notifyDataSetChanged()
                     }
 
                 }
@@ -63,22 +74,19 @@ class Destination : AppCompatActivity() {
 
 
 
-
-        destination_list.onItemClickListener = object : AdapterView.OnItemClickListener {
-            override fun onItemClick(parent: AdapterView<*>, v: View, position: Int, id: Long) {
-
-                // get TextView's Text.
-                val strText = parent.getItemAtPosition(position) as String
-
+        multiAdapter.setItemClickListener(object: Adapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
                 val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
-                intent.putExtra("destination_data", strText)
+                intent.putExtra("destination_data", datas1[position].title)
+                intent.putExtra("destination_data2", datas1[position].body)
                 setResult(RESULT_OK, intent)
 
                 finish()
-
-                // TODO : use strText
             }
-        }
+        })
+
+
+
 
     }
 }

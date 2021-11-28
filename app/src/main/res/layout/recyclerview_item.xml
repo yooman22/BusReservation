@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="76dp">
+
+    <RelativeLayout android:orientation="horizontal"
+        android:background="@drawable/edge"
+        android:layout_width="match_parent"
+        android:layout_height="69dp">
+        <TextView android:id="@+id/title"
+            android:autoSizeTextType="uniform"
+            android:text="정류장 이름"
+            android:textSize="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:id="@+id/body"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:text="번호"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>

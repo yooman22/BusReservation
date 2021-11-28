@@ -13,19 +13,30 @@ import android.widget.AdapterView
 import kotlinx.android.synthetic.main.activity_departure.*
 import android.R.attr.data
 import android.app.Activity
+import android.app.LauncherActivity
 
 import android.content.Intent
 import android.os.Handler
 import android.util.Log
-import android.widget.ListAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import kotlin.concurrent.thread
 import android.widget.ArrayAdapter as ArrayAdapter
+import android.widget.ListAdapter as ListAdapter1
 
 
 class Departure : AppCompatActivity() {
+
+    var list = ArrayList<String>()
+
+    var result : ListVO = ListVO(list)
+    var multiAdapter = Adapter(this)
+
+    private lateinit var viewManager: RecyclerView.LayoutManager
+    val datas1 = mutableListOf<DataItem>()
 
     var departure_txt : ArrayList<String> = arrayListOf()
 
@@ -33,11 +44,10 @@ class Departure : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_departure)
 
-        var list = ArrayList<String>()
+        recyclerview_departure.adapter = multiAdapter
 
-        var result : ListVO = ListVO(list)
-
-        val adapter_departure = ArrayAdapter(this, android.R.layout.simple_list_item_1, departure_txt)
+        viewManager = LinearLayoutManager(this)
+        recyclerview_departure.layoutManager = viewManager
 
         val api = RetrofitClient.getInstance().create(RetrofitService::class.java)
         val callGetLogin = api.API_List("1")
@@ -51,9 +61,11 @@ class Departure : AppCompatActivity() {
                         for(i in result.result) {
                             departure_txt.add(i)
                             Log.d("결과", "성공 : " + i)
-                            adapter_departure.add(i)
+                            datas1.add(DataItem(i,i))
                         }
-                        departure_list.setAdapter(adapter_departure)
+
+                        multiAdapter.datas = datas1
+                        multiAdapter.notifyDataSetChanged()
 
                     }
 
@@ -64,25 +76,22 @@ class Departure : AppCompatActivity() {
                 }
             })
 
-        //val departure_txt = arrayOf("울산대학교앞", "울산대학교후문", "현대청운고앞","현대중공업일산문","천상1교사거리","천상중학교")
 
 
 
-        departure_list.onItemClickListener = object : AdapterView.OnItemClickListener {
-            override fun onItemClick(parent: AdapterView<*>, v: View, position: Int, id: Long) {
 
-                // get TextView's Text.
-                val strText = parent.getItemAtPosition(position) as String
+            multiAdapter.setItemClickListener(object: Adapter.OnItemClickListener{
+                override fun onClick(v: View, position: Int) {
+                    val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
 
-                val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
-                intent.putExtra("depature_data", strText)
-                setResult(RESULT_OK, intent)
+                    intent.putExtra("depature_data", datas1[position].title)
+                    intent.putExtra("depature_data2", datas1[position].body)
+                    setResult(AppCompatActivity.RESULT_OK, intent)
+                    finish()
+                }
+            })
 
-                finish()
 
-                // TODO : use strText
-            }
         }
-    }
 
 }
