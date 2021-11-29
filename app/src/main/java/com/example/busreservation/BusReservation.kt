@@ -1,4 +1,8 @@
 package com.example.busreservation
+import Network.RetrofitClient
+import Network.RetrofitService
+import VO.ListBusVO
+import VO.ListVO
 import android.R.attr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,10 +12,14 @@ import android.view.ContextThemeWrapper
 import kotlinx.android.synthetic.main.activity_bus_reservation.*
 import android.R.attr.data
 import android.app.Activity
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_departure.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class BusReservation : AppCompatActivity() {
@@ -91,9 +99,34 @@ class BusReservation : AppCompatActivity() {
         }
 
         if(destination_result.text != "" && departure_result.text != ""){
-            val bus_txt = arrayOf("733", "307")
+
+            val bus_txt = arrayListOf<String>()
+
             val adapter_departure = ArrayAdapter(this, android.R.layout.simple_list_item_1, bus_txt)
-            bus_list.setAdapter(adapter_departure)
+
+            val api = RetrofitClient.getInstance().create(RetrofitService::class.java)
+
+            Log.d("결과 : ", (departure_result.text as String).trim())
+
+            val callGetLogin = api.API_BUS_List((departure_result.text as String).trim() )
+                .enqueue(object : Callback<ListBusVO> {
+                    override fun onResponse(call: Call<ListBusVO>, response: Response<ListBusVO>) {
+                        Log.d("결과", "성공 : ${response.raw()}")
+                        response.body()?.let {
+                            for(i in it.Result) {
+                                adapter_departure.add(i.RouteNumber)
+                                Log.d("결과", "성공 : " + i)
+                            }
+                            //val adapter_departure = ArrayAdapter(this, android.R.layout.simple_list_item_1, bus_txt)
+                            bus_list.setAdapter(adapter_departure)
+                        }
+                    }
+                    override fun onFailure(call: Call<ListBusVO>, t: Throwable) {
+                        Log.d("결과:", "실패 : $t")
+                    }
+                })
+
+
         }
     }
 

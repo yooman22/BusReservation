@@ -21,4 +21,15 @@ data class station(
     var stationName : String
 )
 
+data class ListBusVO(
+    @SerializedName("Result")
+    var Result : List<ListBus>
+)
+
+data class ListBus(
+    @SerializedName("RouteNumber")
+    var RouteNumber : String
+
+)
+
 

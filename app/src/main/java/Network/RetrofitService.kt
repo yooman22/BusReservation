@@ -1,5 +1,6 @@
 package Network
 
+import VO.ListBusVO
 import VO.ListVO
 import VO.LoginVO
 import com.google.gson.JsonArray
@@ -22,5 +23,11 @@ interface RetrofitService {
     fun API_List(
         @Field("RouteType") RouteType : String,
     ) : Call<ListVO>
+
+    @FormUrlEncoded
+    @POST("/BusStationList.php")
+    fun API_BUS_List(
+        @Field("Name") Name : String
+    ) : Call<ListBusVO>
 
 }
