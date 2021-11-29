@@ -6,8 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Destination">
 
+    <EditText
+        android:height="80dp"
+        android:id="@+id/edit_txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </EditText>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_destination"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </androidx.recyclerview.widget.RecyclerView>
