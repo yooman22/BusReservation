@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/main"
+        android:scaleType="fitXY"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/main1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/main_txt"
+        android:layout_width="300dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:text="로그인창"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textFontWeight="@android:integer/config_longAnimTime"
+        android:layout_marginTop="270dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_marginTop="316dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+        <TextView
+            android:textSize="30dp"
+            android:text="아이디 :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <EditText
+            android:id="@+id/loginId"
+            android:textColor="@color/black"
+            android:background="@drawable/edge"
+            android:autoSizeTextType="uniform"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="356dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+        <TextView
+            android:textSize="30dp"
+            android:text="비밀번호 :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <EditText
+            android:id="@+id/loginPwd"
+            android:textColor="@color/black"
+            android:background="@drawable/edge"
+            android:autoSizeTextType="uniform"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="396dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/signUp"
+            android:textSize="22dp"
+            android:text="회원가입/"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:id="@+id/user_id_find"
+            android:textSize="22dp"
+            android:text="아이디찾기/"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:id="@+id/user_password_find"
+            android:textSize="22dp"
+            android:text="비밀번호찾기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/edge"
+        android:textColor="@android:color/black"
+        android:text="로그인"
+        android:textColorLink="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
