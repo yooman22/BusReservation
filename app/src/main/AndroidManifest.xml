@@ -13,9 +13,11 @@
         android:theme="@style/Theme.BusReservation"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DogPage"
+            android:exported="false" />
+        <activity
             android:name=".Destination"
             android:exported="false" />
-
         <activity
             android:name=".Departure"
             android:exported="false" />
