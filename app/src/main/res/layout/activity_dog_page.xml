@@ -7,75 +7,237 @@
     tools:context=".DogPage">
 
     <ScrollView
-        android:background="@color/mint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/mint"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="-16dp">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:background="@color/mint"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/mint"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
                 android:text="2022년 2월 25일"
-                android:textColor="@color/white"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="30dp"
-                android:layout_height="40dp">
-            </TextView>
+                android:textStyle="bold"></TextView>
 
             <RelativeLayout
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
                 <RelativeLayout
-                    android:layout_marginTop="80dp"
+
                     android:layout_width="match_parent"
+                    android:layout_height="250dp"
                     android:layout_marginLeft="20dp"
+                    android:layout_marginTop="80dp"
                     android:layout_marginRight="20dp"
-                    android:background="@color/white"
-                    android:layout_height="250dp">
-                </RelativeLayout>
+                    android:background="@color/white"></RelativeLayout>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                app:civ_border_width="2dp"
-                app:civ_fill_color="#23f22f"
-                app:civ_border_color="@color/design_default_color_primary_dark"
-                android:src="@drawable/search"
-                android:layout_marginTop="20dp"
-                android:layout_centerHorizontal="true"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/search"
+                    app:civ_border_color="@color/design_default_color_primary_dark"
 
-                android:layout_width="150dp"
-                android:layout_height="150dp"/>
+                    app:civ_border_width="2dp"
+                    app:civ_fill_color="#23f22f" />
 
                 <ImageView
-                    android:src="@drawable/ideas"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="100dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp">
-                </ImageView>
+                    android:src="@drawable/ideas"></ImageView>
 
                 <ImageView
-                    android:src="@drawable/search"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginTop="100dp"
                     android:layout_width="40dp"
-                    android:layout_height="40dp">
-                </ImageView>
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/search"></ImageView>
 
 
             </RelativeLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="심장시상충"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="목욕"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="몸무게"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_marginLeft="22dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="심장시상충"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_marginLeft="22dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="최근 몸무게 변화량"
+                        android:textColor="@color/design_default_color_primary_dark"
+                        android:textSize="15dp">
+                    </TextView>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
