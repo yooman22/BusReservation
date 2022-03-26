@@ -3,7 +3,6 @@ package com.example.busreservation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.animal.InputAnimal
 import com.example.busreservation.R
 import com.example.busreservation.SmsAPI
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         next.setOnClickListener{
-            val nextIntent = Intent(this, InputAnimal::class.java)
+            val nextIntent = Intent(this, Login::class.java)
             startActivity(nextIntent)
         }
 

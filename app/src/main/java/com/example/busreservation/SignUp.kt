@@ -1,4 +1,4 @@
-package com.example.animal
+package com.example.busreservation
 
 import android.content.Context
 import android.content.Intent
