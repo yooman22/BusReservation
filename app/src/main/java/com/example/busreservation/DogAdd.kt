@@ -31,7 +31,7 @@ import android.widget.ArrayAdapter as ArrayAdapter
 import android.widget.ListAdapter as ListAdapter1
 
 
-class Departure : AppCompatActivity() {
+class DogAdd : AppCompatActivity() {
 
     var list = ArrayList<String>()
     var multiAdapter = Adapter(this)
@@ -44,7 +44,7 @@ class Departure : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_departure)
+        setContentView(R.layout.activity_dog_add)
 
         recyclerview_departure.adapter = multiAdapter
 
@@ -84,38 +84,18 @@ class Departure : AppCompatActivity() {
 
 
 
-            multiAdapter.setItemClickListener(object: Adapter.OnItemClickListener{
-                override fun onClick(v: View, position: Int) {
-                    val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
+        multiAdapter.setItemClickListener(object: Adapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+                val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
 
-                    intent.putExtra("depature_data", datas1[position].title)
-                    intent.putExtra("depature_data2", datas1[position].body)
-                    setResult(AppCompatActivity.RESULT_OK, intent)
-                    finish()
-                }
-            })
+                intent.putExtra("depature_data", datas1[position].title)
+                intent.putExtra("depature_data2", datas1[position].body)
+                setResult(AppCompatActivity.RESULT_OK, intent)
+                finish()
+            }
+        })
 
-            edit_txt.addTextChangedListener(object : TextWatcher {
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-
-                override fun afterTextChanged(s: Editable?) {
-
-                    val datas1_copy = mutableListOf<DataItem>()
-
-                    for(i in datas1) {
-                        if(i.title.contains(edit_txt.text))
-                        {
-                            datas1_copy.add(i);
-                        }
-                    }
-
-                    multiAdapter.datas = datas1_copy
-                    multiAdapter.notifyDataSetChanged()
-
-                }
-            })
-        }
+    }
 
 }

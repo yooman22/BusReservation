@@ -17,11 +17,36 @@ class Adapter(private val context : Context) :
     var datas = mutableListOf<DataItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val View = LayoutInflater.from(parent.context)
-            .inflate(R.layout.recyclerview_item, parent, false)
 
-        return MyViewHolder1(View)
+        if(viewType == 0) {
+            val View = LayoutInflater.from(parent.context)
+                .inflate(R.layout.one_item, parent, false)
 
+            return MyViewHolder(View)
+        }
+        else {
+            val View = LayoutInflater.from(parent.context)
+                .inflate(R.layout.recyclerview_item, parent, false)
+
+            return MyViewHolder1(View)
+        }
+
+
+    }
+
+    class MyViewHolder(val view: View) : RecyclerView.ViewHolder(view){ // content 내용
+        val textView: TextView
+        val textView2 : TextView
+        init {
+            // Define click listener for the ViewHolder's View.
+            textView = view.findViewById(R.id.title)
+            textView2 = view.findViewById(R.id.body)
+        }
+
+        fun bind(item: DataItem){
+            textView.text = item.title
+            textView2.text = item.body
+        }
     }
 
     class MyViewHolder1(val view: View) : RecyclerView.ViewHolder(view){ // content 내용
@@ -39,6 +64,8 @@ class Adapter(private val context : Context) :
         }
     }
 
+
+
     interface OnItemClickListener {
         fun onClick(v: View, position: Int)
     }
@@ -47,12 +74,27 @@ class Adapter(private val context : Context) :
         this.itemClickListener = onItemClickListener
     }
 
-    // (4) setItemClickListener로 설정한 함수 실행
+
+        // (4) setItemClickListener로 설정한 함수 실행
     private lateinit var itemClickListener : OnItemClickListener
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as MyViewHolder1).bind(datas[position])
-        holder.setIsRecyclable(false)
+
+        when(datas[position].type) {
+            0-> {
+                (holder as MyViewHolder).bind(datas[position])
+                holder.setIsRecyclable(false)
+            }
+
+            1 -> {
+                (holder as MyViewHolder1).bind(datas[position])
+                holder.setIsRecyclable(false)
+            }
+
+        }
+//
+//        (holder as MyViewHolder1).bind(datas[position])
+//        holder.setIsRecyclable(false)
 
         holder.itemView.setOnClickListener{
             itemClickListener.onClick(it, position)

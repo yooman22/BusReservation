@@ -49,6 +49,8 @@ class Destination : AppCompatActivity() {
         viewManager = LinearLayoutManager(this)
         recyclerview_destination.layoutManager = viewManager
 
+
+
         val api = RetrofitClient.getInstance().create(RetrofitService::class.java)
         val callGetLogin = api.API_List("1")
             .enqueue(object : Callback<ListVO> {
@@ -56,12 +58,13 @@ class Destination : AppCompatActivity() {
                     Log.d("결과", "성공 : ${response.raw()}")
                     Log.d("결과", "성공 : ${response.body()?.result}")
                     response.body()?.let {
+                        datas1.add(DataItem("하이","hello",0))
 
                         for(i in it.result) {
                             destination_name_txt.add(i.stationName)
                             destination_id_txt.add(i.stationID)
                             Log.d("결과", "성공 : " + i)
-                            datas1.add(DataItem(i.stationID,i.stationName))
+                            datas1.add(DataItem(i.stationID,i.stationName,1))
                         }
                         multiAdapter.datas = datas1
                         multiAdapter.notifyDataSetChanged()

@@ -1,10 +1,12 @@
 package com.example.busreservation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.devexpress.dxcharts.*
 import com.example.busreservation.data.GdpData
 import com.example.busreservation.data.GdpValue
+import kotlinx.android.synthetic.main.activity_dog_main.*
 import kotlinx.android.synthetic.main.activity_dog_page.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -92,6 +94,12 @@ class DogPage : AppCompatActivity() {
         chart.legend = legend
 
         chart.axisMaxZoomPercent = 300.toDouble()
+
+        setting.setOnClickListener{
+            val nextIntent = Intent(this, DogAdd::class.java)
+            startActivity(nextIntent);
+
+        }
 
 
     }
