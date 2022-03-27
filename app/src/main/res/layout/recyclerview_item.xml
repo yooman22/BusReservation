@@ -22,6 +22,7 @@
             android:textSize="20dp"></TextView>
 
         <ImageView
+            android:id="@+id/info"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="320dp"
