@@ -101,9 +101,9 @@ class Adapter(private val context : Context) :
 //            itemClickListener.onClick(it, position)
 //        }
 
-        holder.itemView.info.setOnClickListener{
-
-        }
+//        holder.itemView.info.setOnClickListener{
+//
+//        }
 
 
     }

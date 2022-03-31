@@ -36,6 +36,11 @@
         <activity
             android:name=".Login"
             android:exported="true" />
+        <activity android:name=".SignUp" android:exported="true" />
+        <activity android:name=".Find_ID" android:exported="true" />
+        <activity android:name=".Find_ID_Result" android:exported="true" />
+        <activity android:name=".Find_Password" android:exported="true" />
+        <activity android:name=".Find_Password_Result" android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
