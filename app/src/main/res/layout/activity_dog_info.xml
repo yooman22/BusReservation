@@ -330,8 +330,8 @@
 
                 <Button
                     android:text="장"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:textColor="@color/green"
                     android:textStyle="bold"
                     android:textSize="18dp"
@@ -357,8 +357,8 @@
                     android:textColor="@color/green"
                     android:textStyle="bold"
                     android:textSize="18dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:background="@drawable/edge"
                     android:layout_weight="3"
                     android:layout_width="wrap_content"
@@ -398,8 +398,8 @@
 
                 <Button
                     android:text="노령"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:textColor="@color/green"
                     android:textStyle="bold"
                     android:textSize="18dp"
@@ -425,8 +425,8 @@
                     android:textColor="@color/green"
                     android:textStyle="bold"
                     android:textSize="18dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:background="@drawable/edge"
                     android:layout_weight="2"
                     android:layout_width="wrap_content"

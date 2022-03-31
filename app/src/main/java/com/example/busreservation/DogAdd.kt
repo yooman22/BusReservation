@@ -86,12 +86,18 @@ class DogAdd : AppCompatActivity() {
 
         multiAdapter.setItemClickListener(object: Adapter.OnItemClickListener{
             override fun onClick(v: View, position: Int) {
-                val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
+//                val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
+//
+//                intent.putExtra("depature_data", datas1[position].title)
+//                intent.putExtra("depature_data2", datas1[position].body)
+//                setResult(AppCompatActivity.RESULT_OK, intent)
+//                finish()
 
-                intent.putExtra("depature_data", datas1[position].title)
-                intent.putExtra("depature_data2", datas1[position].body)
-                setResult(AppCompatActivity.RESULT_OK, intent)
-                finish()
+                if(position == 0){
+                    val nextIntent = Intent(baseContext, DogInfo::class.java)
+                    startActivity(nextIntent)
+                }
+
             }
         })
 

@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat.startActivityForResult
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
 import kotlin.math.cos
@@ -85,6 +87,10 @@ class Adapter(private val context : Context) :
             0-> {
                 (holder as MyViewHolder).bind(datas[position])
                 holder.setIsRecyclable(false)
+
+//                holder.itemView.setOnClickListener{
+//
+//                }
             }
 
             1 -> {
@@ -97,13 +103,11 @@ class Adapter(private val context : Context) :
 //        (holder as MyViewHolder1).bind(datas[position])
 //        holder.setIsRecyclable(false)
 
-//        holder.itemView.setOnClickListener{
-//            itemClickListener.onClick(it, position)
-//        }
+        holder.itemView.setOnClickListener{
+            itemClickListener.onClick(it, position)
+        }
 
-//        holder.itemView.info.setOnClickListener{
-//
-//        }
+
 
 
     }
