@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DogShower">
+    tools:context=".DogHeart">
 
     <androidx.appcompat.widget.Toolbar
         android:background="@color/orange"
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="오늘\n목욕을 했나요?">
+            android:text="오늘\n심장사상충 예방을 했나요?">
         </TextView>
 
         <ImageView

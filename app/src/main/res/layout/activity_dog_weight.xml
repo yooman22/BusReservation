@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="오늘의\n산책시간을 기록해주세요!">
+            android:text="오늘\n몸무게를 기록해주세요!">
         </TextView>
 
         <ImageView
