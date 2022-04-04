@@ -19,7 +19,7 @@
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_departure.xml" value="0.16875" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_destination.xml" value="0.15416666666666667" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_add.xml" value="0.19021739130434784" />
-        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_heart.xml" value="0.12639311043566362" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_heart.xml" value="0.33" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_info.xml" value="0.25" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_introduce.xml" value="0.1" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_introduce_detail.xml" value="0.16032608695652173" />
@@ -27,6 +27,7 @@
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_map.xml" value="0.18" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_page.xml" value="0.31575342465753425" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_shower.xml" value="0.18" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_total_money.xml" value="0.33" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_weight.xml" value="0.18" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_find_id.xml" value="0.2346014492753623" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_find_id_result.xml" value="0.16032608695652173" />
@@ -50,5 +51,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BusReservation"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DogTotalMoney"
+            android:exported="false" />
+        <activity
             android:name=".DogHeart"
             android:exported="false" />
         <activity
