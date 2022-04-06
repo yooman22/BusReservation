@@ -86,23 +86,22 @@
                     android:textStyle="bold"></TextView>
 
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="15dp"
-                    android:text="사람나이"
-                    android:layout_marginLeft="220dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="220dp"
                     android:layout_marginTop="210dp"
-                    android:src="@drawable/ideas">
-                </TextView>
+                    android:src="@drawable/ideas"
+                    android:text="사람나이"
+                    android:textSize="15dp"
+                    android:textStyle="bold"></TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="217dp"
-                    android:layout_marginTop="230dp"
-                    android:src="@drawable/ideas"
                     android:layout_alignParentRight="true"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginRight="217dp"
+                    android:src="@drawable/ideas"
                     android:text="3개월"
                     android:textSize="15dp"
                     android:textStyle="bold"></TextView>

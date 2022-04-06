@@ -7,32 +7,29 @@
     tools:context=".DogTotalMoney">
 
     <androidx.appcompat.widget.Toolbar
-        android:background="@color/purple_500"
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="80dp">
+        android:layout_height="80dp"
+        android:background="@color/purple_500"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="오늘\n지출을 기록해주세요!">
-        </TextView>
+            android:text="오늘\n지출을 기록해주세요!"
+            android:textColor="@color/white"
+            android:textSize="20dp"></TextView>
 
         <ImageView
-            android:layout_marginLeft="140dp"
-            android:src="@drawable/ideas"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </ImageView>
+            android:layout_height="40dp"
+            android:layout_marginLeft="140dp"
+            android:src="@drawable/ideas"></ImageView>
 
         <ImageView
 
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ImageView>
+            android:layout_height="wrap_content"></ImageView>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -52,71 +49,66 @@
         android:id="@+id/btn_A"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/edge_white"
         android:text="사료/간식"
         android:textStyle="bold"
-        android:background="@drawable/edge_white"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </Button>
+        app:layout_constraintTop_toTopOf="parent"></Button>
 
     <Button
         android:id="@+id/btn_B"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/edge_gray"
         android:text="장난감"
         android:textStyle="bold"
-        android:background="@drawable/edge_gray"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="150dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </Button>
+        app:layout_constraintTop_toTopOf="parent"></Button>
 
     <Button
         android:id="@+id/btn_C"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/edge_gray"
         android:text="병원"
         android:textStyle="bold"
-        android:background="@drawable/edge_gray"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="280dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </Button>
+        app:layout_constraintTop_toTopOf="parent"></Button>
 
     <Button
         android:id="@+id/btn_D"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/edge_white"
         android:text="미용/의류"
         android:textStyle="bold"
-        android:background="@drawable/edge_white"
-        android:layout_marginTop="170dp"
-        android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </Button>
+        app:layout_constraintTop_toTopOf="parent"></Button>
 
     <Button
         android:id="@+id/btn_E"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/edge_gray"
         android:text="기타"
         android:textStyle="bold"
-        android:background="@drawable/edge_gray"
-        android:layout_marginTop="170dp"
-        android:layout_marginLeft="150dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </Button>
+        app:layout_constraintTop_toTopOf="parent"></Button>
 
     <RelativeLayout
-        android:visibility="visible"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="visible">
 
         <TextView
             android:layout_width="120dp"
@@ -132,21 +124,20 @@
             android:id="@+id/edit_A"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:textStyle="bold"
-            android:layout_marginTop="260dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="260dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/edge_white"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </EditText>
+            app:layout_constraintTop_toTopOf="parent"></EditText>
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:visibility="visible"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="visible">
 
         <TextView
             android:layout_width="120dp"
@@ -162,32 +153,31 @@
             android:id="@+id/edit_B"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:textStyle="bold"
-            android:layout_marginTop="360dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="360dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/edge_white"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </EditText>
+            app:layout_constraintTop_toTopOf="parent"></EditText>
 
     </RelativeLayout>
 
 
     <androidx.appcompat.widget.Toolbar
-        android:background="@color/purple_500"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/bottom"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent">
+
         <TextView
-            android:textAlignment="center"
-            android:textSize="40dp"
-            android:textColor="@color/white"
-            android:text="등록하기"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </TextView>
+            android:layout_height="match_parent"
+            android:text="등록하기"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40dp"></TextView>
 
     </androidx.appcompat.widget.Toolbar>
 
