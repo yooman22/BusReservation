@@ -13,6 +13,15 @@
         android:theme="@style/Theme.BusReservation"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DogRegistrationThree"
+            android:exported="false" />
+        <activity
+            android:name=".DogRegistrationTwo"
+            android:exported="false" />
+        <activity
+            android:name=".DogRegistrationOne"
+            android:exported="false" />
+        <activity
             android:name=".DogTotalMoney"
             android:exported="false" />
         <activity

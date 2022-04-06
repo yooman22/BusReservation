@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DogRegistrationThree">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="계산기"
+                android:textStyle="bold"
+                android:src="@drawable/ideas"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <LinearLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="4dp">
+
+                <View
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </View>
+
+                <View
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </View>
+
+                <View
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </View>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Step"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <ImageView
+                android:src="@drawable/ideas"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="70dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <ImageView
+                android:src="@drawable/ideas"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="110dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <ImageView
+                android:src="@drawable/ideas"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="150dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="우리 별의 영양을 위해\n몇가지만 더 물어볼게요:)"
+                android:layout_marginTop="120dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/green"
+                android:layout_marginLeft="20dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="별,9년 4개월"
+                android:layout_marginTop="175dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="아이와 산책은 매일 하시나요?"
+                android:layout_marginTop="195dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="220dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:text="네"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp">
+                </Button>
+
+                <Button
+                    android:text="아니오"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp">
+                </Button>
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="매일 하루에 한시간 이상 하시나요?"
+                android:layout_marginTop="270dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="300dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:text="네"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp">
+                </Button>
+
+                <Button
+                    android:text="아니오"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp">
+                </Button>
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="아이의 어떤 건강고민이 있나요?"
+                android:layout_marginTop="350dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/gray"
+                android:layout_marginLeft="20dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="최대 3개까지 선택 가능합니다."
+                android:layout_marginTop="375dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="400dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:text="알레르기"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="장"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="치아/구강"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="비만"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="뼈/관절"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="2"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="460dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:text="피부/모질"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="노령"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="신장/요로"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="호흡기"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="심장"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="3"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="520dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:text="당뇨"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="눈/귀"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="행동"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginRight="180dp"
+                    android:background="@drawable/edge"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+
+            </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="580dp"
+                    android:text="아이가 알레르기가 있나요?"
+                    android:textColor="@color/gray"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <LinearLayout
+                android:layout_marginTop="620dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:text="네"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+                <Button
+                    android:text="아니요"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp">
+                </Button>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+            <Button
+                android:text="모두 작성했어요!"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edge_gray"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

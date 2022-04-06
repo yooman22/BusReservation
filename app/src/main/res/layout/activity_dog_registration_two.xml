@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DogRegistrationTwo">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="계산기"
+        android:textStyle="bold"
+        android:src="@drawable/ideas"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="4dp">
+
+        <View
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </View>
+
+        <View
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </View>
+
+        <View
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </View>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Step"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <ImageView
+        android:src="@drawable/ideas"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <ImageView
+        android:src="@drawable/ideas"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="110dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <ImageView
+        android:src="@drawable/ideas"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="150dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="우리 별는 어떤아이에요?"
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <TextView
+        android:textColor="@color/green"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="별,9년 4개월"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/search"
+        app:civ_border_color="@color/design_default_color_primary_dark"
+        app:civ_border_width="2dp"
+        app:civ_fill_color="#23f22f"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="품종"
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="330dp"
+        android:text="강아지"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </RadioButton>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="330dp"
+        android:text="고양이"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </RadioButton>
+
+    <EditText
+        android:textColor="@color/black"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15dp"
+        android:hint="품종을 선택해주세요."
+        android:layout_marginTop="370dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </EditText>
+
+    <ImageView
+        android:textColor="@color/black"
+        android:layout_marginLeft="350dp"
+        android:textSize="15dp"
+        android:src="@drawable/ideas"
+        android:layout_marginTop="370dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="성별"
+        android:layout_marginTop="412dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <LinearLayout
+        android:layout_marginTop="450dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:text="남자"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge_green_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp">
+        </Button>
+
+        <Button
+            android:text="여자"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp">
+        </Button>
+
+    </LinearLayout>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="아이가 중성화 수술을 했나요?"
+        android:layout_marginTop="510dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <LinearLayout
+        android:layout_marginTop="545dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:text="안했어요"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge_green_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp">
+        </Button>
+
+        <Button
+            android:text="했어요"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp">
+        </Button>
+
+    </LinearLayout>
+
+
+    <Button
+        android:text="다음"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@drawable/edge_gray"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
