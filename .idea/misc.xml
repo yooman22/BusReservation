@@ -10,6 +10,7 @@
         <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/layout/activity_bus_reservation.xml" value="0.24270833333333333" />
         <entry key="..\:/android_Bus_Reservation/BusReservation/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/drawable/black_edge.xml" value="0.1675925925925926" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/drawable/button.xml" value="0.2537037037037037" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/drawable/edge.xml" value="0.16203703703703703" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/drawable/edge_gray.xml" value="0.2574074074074074" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/drawable/edge_green_btn.xml" value="0.2351851851851852" />
@@ -26,8 +27,9 @@
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_main.xml" value="0.2346014492753623" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_map.xml" value="0.18" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_page.xml" value="0.31575342465753425" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_recommend.xml" value="0.26943844492440605" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_registration_one.xml" value="0.33" />
-        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_registration_three.xml" value="0.16756212222968436" />
+        <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_registration_three.xml" value="0.4166666666666667" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_registration_two.xml" value="0.33" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_shower.xml" value="0.18" />
         <entry key="..\:/android_project_kmong/BusReservation/app/src/main/res/layout/activity_dog_total_money.xml" value="0.33" />

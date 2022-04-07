@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DogRecommend">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="계산기"
+                    android:textStyle="bold"
+                    android:src="@drawable/ideas"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="인생 사료찾으러 가기"
+                    android:layout_marginTop="10dp"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </TextView>
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <View
+                        android:layout_weight="1"
+                        android:background="@color/gray_"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </View>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="어떤 종류의 사료를 찾고 계신가요?"
+                    android:textSize="20dp"
+                    android:textStyle="bold"></TextView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="건식사료"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:drawableLeft="@drawable/button"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="소프트사료"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:drawableLeft="@drawable/button"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="습식사료"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:drawableLeft="@drawable/button"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="자연식사료"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:drawableLeft="@drawable/button"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="처방식사료"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:drawableLeft="@drawable/button"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="기타사료"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:drawableLeft="@drawable/button"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="별"
+                    android:textColor="@color/green"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="이가 좋아하는 혹은 싫어하는\n단백질원이 있나요?"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray_"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="좋아하는"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="110dp"
+                    android:text="좋아하는 단백질원을 포함하여 검색합니다."
+                    android:textSize="15dp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:textColor="@color/green"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                </ImageView>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:textColor="@color/green"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                </ImageView>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:textColor="@color/green"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                </ImageView>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:textColor="@color/green"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                </ImageView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray_"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="싫어하는"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="110dp"
+                    android:text="싫어하는 단백질원을 포함하여 검색합니다."
+                    android:textSize="15dp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:textColor="@color/green"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                </ImageView>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:textColor="@color/green"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                </ImageView>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:textColor="@color/green"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                </ImageView>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:textColor="@color/green"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                </ImageView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray_">
+                </View>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="별"
+                    android:textColor="@color/green"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="이의 건강상태를\n체크해주세요!"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="특별한 건강상태"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="임신/수유"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="비만"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="노령"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="성장기(대형견)"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray_">
+                </View>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="별"
+                    android:textColor="@color/green"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="이의 알레르기원"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </View>
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="알레르기 정보 수정하기"
+                    android:background="@drawable/edge_white"
+                    android:textSize="15dp"
+                    android:textStyle="bold">
+                </Button>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:text="성정된 알레르기 정보가 없어요"
+                android:textSize="15dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/ideas">
+            </ImageView>
+
+            <RelativeLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray_"></View>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="원하는 기능성 성분이 있나요?"
+                android:textSize="18dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="위장"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="관절/뼈"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="심장"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="피부"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="지질장애"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="당뇨"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="항산화"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="체지방 감소"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="면역"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="인지장애"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="면역"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="인지장애"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="신장/요로"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="간"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="피로"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="알레르기"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="눈"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="행동"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="운동"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="구강"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray_"></View>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+
+                    android:text="초기화"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/edge"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+                <Button
+                    android:text="인생 사료 결과(3.214)개"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:background="@drawable/edge_green_btn"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
