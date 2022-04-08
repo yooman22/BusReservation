@@ -118,6 +118,7 @@
     </TextView>
 
     <EditText
+        android:id="@+id/name"
         android:textColor="@color/black"
         android:layout_marginLeft="24dp"
         android:textSize="15dp"
@@ -169,6 +170,7 @@
     </ImageView>
 
     <Button
+        android:id="@+id/confirm"
         android:text="다음"
         android:layout_marginBottom="10dp"
         android:textColor="@color/white"

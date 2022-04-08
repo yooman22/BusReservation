@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.format.DateFormat
+import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import kotlinx.android.synthetic.main.activity_dog_registration_one.*
 import java.text.SimpleDateFormat
@@ -19,6 +20,9 @@ import androidx.activity.result.contract.ActivityResultContracts.StartActivityFo
 class DogRegistrationOne : AppCompatActivity() {
 
     private var resultLauncher: ActivityResultLauncher<Intent>? = null
+
+    var DateString : String = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,8 +57,9 @@ class DogRegistrationOne : AppCompatActivity() {
                         val dateFormat = SimpleDateFormat("y년-mm개월")
                         val curDate : String = dateFormat.format(now-cal.timeInMillis)
 
-                        date.setText( (getMonthsDifference(Date(cal.timeInMillis),Date(now))/12).toString() + "년"
-                         + (getMonthsDifference(Date(cal.timeInMillis),Date(now))%12).toString() + "개월")
+                        DateString = (getMonthsDifference(Date(cal.timeInMillis),Date(now))/12).toString() + "년" + (getMonthsDifference(Date(cal.timeInMillis),Date(now))%12).toString() + "개월"
+
+                        date.setText(DateString)
 
                         // 1000 * 60 * 60 * 24 1일
                         // 1000 * 60 * 60 * 24 * 30 1달
@@ -66,6 +71,20 @@ class DogRegistrationOne : AppCompatActivity() {
             datepicker.setOnClickListener{
                 val nextIntent = Intent(this, DatePicker::class.java)
                 startForResult.launch(nextIntent)
+            }
+
+            confirm.setOnClickListener{
+
+                if(name.getText().toString() == "" || date.getText().toString() == ""){
+                    Toast.makeText(getApplicationContext(),"미 입력 항목이 있습니다.",Toast.LENGTH_LONG).show()
+                }else {
+                    val nextIntent = Intent(this, DogRegistrationTwo::class.java)
+                    intent.putExtra("name",name.getText().toString())
+                    intent.putExtra("date",DateString)
+
+                    startActivity(nextIntent)
+                }
+
             }
 
         }
