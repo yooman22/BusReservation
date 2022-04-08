@@ -13,11 +13,13 @@
         android:theme="@style/Theme.BusReservation"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DogList"
+            android:exported="false" />
+        <activity
             android:name=".DatePicker"
             android:excludeFromRecents="true"
             android:taskAffinity=""
-            android:theme="@style/Transparent"
-             />
+            android:theme="@style/Transparent" />
         <activity
             android:name=".DogFeedItemInfo"
             android:exported="false" />
@@ -92,6 +94,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

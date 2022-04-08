@@ -135,15 +135,14 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:textColor="@color/black"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="40dp"
-                    android:textSize="20dp"
-                    android:text="3.9"
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                </EditText>
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:text="3.9"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"></EditText>
 
                 <TextView
                     android:layout_width="30dp"

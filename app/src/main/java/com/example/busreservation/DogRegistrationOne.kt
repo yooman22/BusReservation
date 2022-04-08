@@ -79,8 +79,8 @@ class DogRegistrationOne : AppCompatActivity() {
                     Toast.makeText(getApplicationContext(),"미 입력 항목이 있습니다.",Toast.LENGTH_LONG).show()
                 }else {
                     val nextIntent = Intent(this, DogRegistrationTwo::class.java)
-                    intent.putExtra("name",name.getText().toString())
-                    intent.putExtra("date",DateString)
+                    nextIntent.putExtra("name",name.getText().toString())
+                    nextIntent.putExtra("date",DateString)
 
                     startActivity(nextIntent)
                 }

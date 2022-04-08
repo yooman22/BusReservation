@@ -112,6 +112,7 @@
         </TextView>
 
         <TextView
+            android:id="@+id/name"
             android:textColor="@color/black"
             android:layout_marginLeft="5dp"
             android:textSize="25dp"
@@ -140,6 +141,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/date"
         android:textColor="@color/green"
         android:layout_marginLeft="20dp"
         android:textSize="20dp"
@@ -168,7 +170,7 @@
     <TextView
         android:textColor="@color/black"
         android:layout_marginLeft="20dp"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:text="품종"
         android:layout_marginTop="300dp"
@@ -179,6 +181,7 @@
     </TextView>
 
     <RadioButton
+        android:id="@+id/cat"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
@@ -189,6 +192,7 @@
     </RadioButton>
 
     <RadioButton
+        android:id="@+id/dog"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginLeft="100dp"
@@ -199,6 +203,7 @@
     </RadioButton>
 
     <EditText
+        android:id="@+id/dogName"
         android:textColor="@color/black"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="20dp"
@@ -212,6 +217,7 @@
     </EditText>
 
     <ImageView
+        android:id="@+id/dogListView"
         android:textColor="@color/black"
         android:layout_marginLeft="350dp"
         android:textSize="15dp"
@@ -226,7 +232,7 @@
     <TextView
         android:textColor="@color/black"
         android:layout_marginLeft="20dp"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:text="성별"
         android:layout_marginTop="412dp"
@@ -237,13 +243,14 @@
     </TextView>
 
     <LinearLayout
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="440dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
+            android:id="@+id/man"
             android:text="남자"
             android:textColor="@color/green"
             android:textStyle="bold"
@@ -253,10 +260,11 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="54dp">
+            android:layout_height="45dp">
         </Button>
 
         <Button
+            android:id="@+id/woman"
             android:text="여자"
             android:textColor="@color/green"
             android:textStyle="bold"
@@ -266,18 +274,19 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="54dp">
+            android:layout_height="45dp">
         </Button>
 
     </LinearLayout>
 
     <TextView
+
         android:textColor="@color/black"
         android:layout_marginLeft="20dp"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:text="아이가 중성화 수술을 했나요?"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="485dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -285,13 +294,14 @@
     </TextView>
 
     <LinearLayout
-        android:layout_marginTop="545dp"
+        android:layout_marginTop="510dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
+            android:id="@+id/no"
             android:text="안했어요"
             android:textColor="@color/green"
             android:textStyle="bold"
@@ -301,10 +311,11 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="54dp">
+            android:layout_height="45dp">
         </Button>
 
         <Button
+            android:id="@+id/yes"
             android:text="했어요"
             android:textColor="@color/green"
             android:textStyle="bold"
@@ -314,13 +325,56 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="54dp">
+            android:layout_height="45dp">
         </Button>
 
     </LinearLayout>
 
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="무게"
+        android:layout_marginTop="555dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="580dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="40dp"
+            android:text="3.9"
+            android:textColor="@color/black"
+            android:textSize="15dp"></EditText>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:text="kg"
+            android:textColor="@color/black"
+            android:textSize="15dp"></TextView>
+
+    </RelativeLayout>
 
     <Button
+        android:id="@+id/confirm1"
         android:text="다음"
         android:layout_marginBottom="10dp"
         android:textColor="@color/white"
