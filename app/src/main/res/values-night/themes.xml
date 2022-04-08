@@ -22,4 +22,13 @@
         <item name="colorControlActivated">@color/orange</item>
     </style>
 
+    <style name="Transparent" parent="@style/Theme.BusReservation">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
 </resources>

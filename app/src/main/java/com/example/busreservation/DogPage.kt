@@ -97,7 +97,13 @@ class DogPage : AppCompatActivity() {
 
         setting.setOnClickListener{
             val nextIntent = Intent(this, DogAdd::class.java)
-            startActivity(nextIntent);
+            startActivity(nextIntent)
+
+        }
+
+        registration.setOnClickListener{
+            val nextIntent = Intent(this, DogRegistrationOne::class.java)
+            startActivity(nextIntent)
 
         }
 

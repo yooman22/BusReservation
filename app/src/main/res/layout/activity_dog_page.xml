@@ -53,27 +53,44 @@
                     app:civ_border_width="2dp"
                     app:civ_fill_color="#23f22f" />
 
-                <TextView
-                    android:textStyle="bold"
-                    android:textSize="25dp"
-                    android:text="두부"
-                    android:layout_centerHorizontal="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="170dp"
-                    android:src="@drawable/ideas">
-                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:textStyle="bold"
-                    android:textSize="25dp"
-                    android:text="두부"
-                    android:layout_marginLeft="230dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="170dp"
-                    android:src="@drawable/ideas">
-                </ImageView>
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="170dp"
+                        android:src="@drawable/ideas"
+                        android:text="두부"
+                        android:textSize="25dp"
+                        android:textStyle="bold"></TextView>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="170dp"
+                        android:src="@drawable/ideas"
+                        android:text="두부"
+                        android:textSize="25dp"
+                        android:textStyle="bold"></ImageView>
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </View>
+
+                </LinearLayout>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -133,59 +150,74 @@
                     android:src="@drawable/search">
                 </ImageView>
 
-                <ImageView
-                    android:layout_width="40dp"
+                <Button
+                    android:id="@+id/registration"
+                    android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="280dp"
-                    android:layout_marginLeft="60dp"
-                    android:src="@drawable/search">
-                </ImageView>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="260dp"
+                    android:background="@color/mint"
+                    android:src="@drawable/ideas"
+                    android:text="등록하기"
+                    android:textSize="25dp"
+                    android:textStyle="bold"></Button>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="280dp"
-                    android:layout_marginLeft="110dp"
-                    android:src="@drawable/search">
-                </ImageView>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="280dp"
-                    android:layout_marginLeft="160dp"
-                    android:src="@drawable/search">
-                </ImageView>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="280dp"
-                    android:layout_marginLeft="210dp"
-                    android:src="@drawable/search">
-                </ImageView>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="280dp"
+                        android:src="@drawable/search"></ImageView>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="280dp"
-                    android:layout_marginLeft="260dp"
-                    android:src="@drawable/search">
-                </ImageView>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginTop="280dp"
+                        android:src="@drawable/search"></ImageView>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="280dp"
-                    android:layout_marginLeft="310dp"
-                    android:src="@drawable/search">
-                </ImageView>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="160dp"
+                        android:layout_marginTop="280dp"
+                        android:src="@drawable/search"></ImageView>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="210dp"
+                        android:layout_marginTop="280dp"
+                        android:src="@drawable/search"></ImageView>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="260dp"
+                        android:layout_marginTop="280dp"
+                        android:src="@drawable/search"></ImageView>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginTop="280dp"
+                        android:src="@drawable/search"></ImageView>
+
+                </RelativeLayout>
+
 
             </RelativeLayout>
 
