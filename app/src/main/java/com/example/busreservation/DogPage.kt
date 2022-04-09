@@ -3,11 +3,13 @@ package com.example.busreservation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.devexpress.dxcharts.*
 import com.example.busreservation.data.GdpData
 import com.example.busreservation.data.GdpValue
 import kotlinx.android.synthetic.main.activity_dog_main.*
 import kotlinx.android.synthetic.main.activity_dog_page.*
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -16,6 +18,22 @@ class DogPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dog_page)
+
+        val now = System.currentTimeMillis()
+        val date = Date(now)
+        var sdf : SimpleDateFormat = SimpleDateFormat("yyyy년 MM월 dd일");
+
+        var getTime : String = sdf.format(date);
+
+        current_date.setText(getTime)
+
+        if(SharedPreference.prefs.getBool("Save",false)){
+            btn_list.visibility = View.VISIBLE
+            registration.visibility = View.GONE
+        }else {
+            btn_list.visibility = View.GONE
+            registration.visibility = View.VISIBLE
+        }
 
         val usaGdpSeries = LineSeries()
         usaGdpSeries.displayName = "USA"

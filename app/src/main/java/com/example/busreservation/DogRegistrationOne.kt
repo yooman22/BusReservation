@@ -22,7 +22,7 @@ class DogRegistrationOne : AppCompatActivity() {
     private var resultLauncher: ActivityResultLauncher<Intent>? = null
 
     var DateString : String = ""
-
+    var DateMonth : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +60,7 @@ class DogRegistrationOne : AppCompatActivity() {
                         DateString = (getMonthsDifference(Date(cal.timeInMillis),Date(now))/12).toString() + "년" + (getMonthsDifference(Date(cal.timeInMillis),Date(now))%12).toString() + "개월"
 
                         date.setText(DateString)
-
+                        DateMonth = getMonthsDifference(Date(cal.timeInMillis),Date(now))
                         // 1000 * 60 * 60 * 24 1일
                         // 1000 * 60 * 60 * 24 * 30 1달
                         // 1000 * 60 * 60 * 24 * 30 * 12 1년
@@ -71,6 +71,8 @@ class DogRegistrationOne : AppCompatActivity() {
             datepicker.setOnClickListener{
                 val nextIntent = Intent(this, DatePicker::class.java)
                 startForResult.launch(nextIntent)
+
+                confirm.background = getResources().getDrawable(R.drawable.edge_green_btn)
             }
 
             confirm.setOnClickListener{
@@ -81,6 +83,7 @@ class DogRegistrationOne : AppCompatActivity() {
                     val nextIntent = Intent(this, DogRegistrationTwo::class.java)
                     nextIntent.putExtra("name",name.getText().toString())
                     nextIntent.putExtra("date",DateString)
+                    nextIntent.putExtra("dateMonth",DateMonth)
 
                     startActivity(nextIntent)
                 }

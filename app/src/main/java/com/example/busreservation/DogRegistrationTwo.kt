@@ -34,9 +34,13 @@ class DogRegistrationTwo : AppCompatActivity() {
                 Toast.makeText(getApplicationContext(),"미 입력 항목이 있습니다.", Toast.LENGTH_LONG).show()
             }else {
                 val nextIntent = Intent(this, DogRegistrationThree::class.java)
-                intent.putExtra("name",name.getText().toString())
-                intent.putExtra("date",date.getText())
-
+                nextIntent.putExtra("name",name.getText().toString())
+                nextIntent.putExtra("date",intent.getStringExtra("date").toString())
+                nextIntent.putExtra("weight",weight.getText())
+                nextIntent.putExtra("gander",gander) // false 남성, true 여성
+                nextIntent.putExtra("animal",dogcat) // true 강아지,false 고양이
+                nextIntent.putExtra("neutrality",yesno) // 중성화 yes , 중성화 no
+                nextIntent.putExtra("dateMonth",intent.getIntExtra("dateMonth",-1))
                 startActivity(nextIntent)
             }
 
@@ -90,6 +94,8 @@ class DogRegistrationTwo : AppCompatActivity() {
         dogListView.setOnClickListener{
             val nextIntent = Intent(this, DogList::class.java)
             startForResult.launch(nextIntent)
+
+            confirm1.background = getResources().getDrawable(R.drawable.edge_green_btn)
         }
 
 
