@@ -188,23 +188,23 @@ class DogPage : AppCompatActivity() {
         when(index){
 
             1-> {
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive1",0)/getTotalMoney()).toDouble() * 100
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive1",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             2-> {
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive2",0)/getTotalMoney()).toDouble() * 100
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive2",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             3-> {
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive3",0)/getTotalMoney()).toDouble() * 100
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive3",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             4-> {
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive4",0)/getTotalMoney()).toDouble() * 100
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive4",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             5-> {
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive5",0)/getTotalMoney()).toDouble() * 100
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive5",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             else -> {
