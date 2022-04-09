@@ -258,6 +258,7 @@
                     </TextView>
 
                     <TextView
+                        android:id="@+id/txt_heart_date"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -290,6 +291,7 @@
                     </TextView>
 
                     <TextView
+                        android:id="@+id/txt_shower_date"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -323,6 +325,7 @@
                     </TextView>
 
                     <TextView
+                        android:id="@+id/txt_weight"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

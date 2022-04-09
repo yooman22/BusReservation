@@ -49,6 +49,27 @@ class DogPage : AppCompatActivity() {
             registration.visibility = View.VISIBLE
         }
 
+        txt_weight.setText(SharedPreference.prefs.getString("dog_weight","-"))
+
+        if( SharedPreference.prefs.getBigInteger("showerDate",0) == 0.toLong()){
+            txt_shower_date.setText("-")
+        }else {
+            txt_shower_date.setText(
+                ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger(
+                    "showerDate",
+                    0
+                )) / (24 * 60 * 60 * 1000)).toString() + "일"
+            )
+        }
+
+        if(SharedPreference.prefs.getBigInteger("heartDate",0) == 0.toLong()){
+            txt_heart_date.setText("-")
+        }else {
+            txt_heart_date.setText( ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger("heartDate",0)) / (24 * 60 * 60 * 1000)).toString() + "일" )
+        }
+
+
+
         btn_map.setOnClickListener {
             val nextIntent = Intent(this, DogMap::class.java)
             startActivity(nextIntent)
