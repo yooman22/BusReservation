@@ -519,6 +519,7 @@
                 </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/total_money"
                     android:textStyle="bold"
                     android:textSize="25dp"
                     android:layout_gravity="center"
@@ -543,6 +544,7 @@
                     </TextView>
 
                     <ProgressBar
+                        android:id="@+id/pro1"
                         android:progress="25"
                         style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_marginLeft="10dp"
@@ -552,6 +554,7 @@
                     </ProgressBar>
 
                     <TextView
+                        android:id="@+id/per1"
                         android:layout_marginLeft="5dp"
                         android:text="0%"
                         android:layout_gravity="center"
@@ -578,6 +581,7 @@
                     </TextView>
 
                     <ProgressBar
+                        android:id="@+id/pro2"
                         android:progress="50"
                         style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_marginLeft="10dp"
@@ -587,6 +591,7 @@
                     </ProgressBar>
 
                     <TextView
+                        android:id="@+id/per2"
                         android:layout_marginLeft="5dp"
                         android:text="0%"
                         android:layout_gravity="center"
@@ -613,6 +618,7 @@
                     </TextView>
 
                     <ProgressBar
+                        android:id="@+id/pro3"
                         android:progress="70"
                         style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_marginLeft="10dp"
@@ -622,6 +628,7 @@
                     </ProgressBar>
 
                     <TextView
+                        android:id="@+id/per3"
                         android:layout_marginLeft="5dp"
                         android:text="0%"
                         android:layout_gravity="center"
@@ -648,6 +655,7 @@
                     </TextView>
 
                     <ProgressBar
+                        android:id="@+id/pro4"
                         android:progress="10"
                         style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_marginLeft="10dp"
@@ -657,6 +665,7 @@
                     </ProgressBar>
 
                     <TextView
+                        android:id="@+id/per4"
                         android:layout_marginLeft="5dp"
                         android:text="0%"
                         android:layout_gravity="center"
@@ -683,6 +692,7 @@
                     </TextView>
 
                     <ProgressBar
+                        android:id="@+id/pro5"
                         android:progress="100"
                         style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_marginLeft="10dp"
@@ -692,6 +702,7 @@
                     </ProgressBar>
 
                     <TextView
+                        android:id="@+id/per5"
                         android:layout_marginLeft="5dp"
                         android:text="0%"
                         android:layout_gravity="center"

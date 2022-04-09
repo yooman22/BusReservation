@@ -27,6 +27,20 @@ class DogPage : AppCompatActivity() {
 
         current_date.setText(getTime)
 
+        total_money.setText(getTotalMoney().toString() + "원")
+
+        per1.setText(getExpensiveIndex(1).toString())
+        per2.setText(getExpensiveIndex(2).toString())
+        per3.setText(getExpensiveIndex(3).toString())
+        per4.setText(getExpensiveIndex(4).toString())
+        per5.setText(getExpensiveIndex(5).toString())
+
+        pro1.progress = getExpensiveIndex(1).toInt()
+        pro2.progress = getExpensiveIndex(2).toInt()
+        pro3.progress = getExpensiveIndex(3).toInt()
+        pro4.progress = getExpensiveIndex(4).toInt()
+        pro5.progress = getExpensiveIndex(5).toInt()
+
         if(SharedPreference.prefs.getBool("Save",false)){
             btn_list.visibility = View.VISIBLE
             registration.visibility = View.GONE
@@ -128,6 +142,46 @@ class DogPage : AppCompatActivity() {
 
     }
 
+    fun getTotalMoney() : Int {
+        var cost =  SharedPreference.prefs.getInt("expensive1",0)
+        + SharedPreference.prefs.getInt("expensive2",0)
+        + SharedPreference.prefs.getInt("expensive3",0)
+        + SharedPreference.prefs.getInt("expensive4",0)
+        + SharedPreference.prefs.getInt("expensive5",0)
+
+        return cost
+    }
+
+    fun getExpensiveIndex(index : Int) : Double {
+
+        when(index){
+
+            1-> {
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive1",0)/getTotalMoney()).toDouble() * 100
+            }
+
+            2-> {
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive2",0)/getTotalMoney()).toDouble() * 100
+            }
+
+            3-> {
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive3",0)/getTotalMoney()).toDouble() * 100
+            }
+
+            4-> {
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive4",0)/getTotalMoney()).toDouble() * 100
+            }
+
+            5-> {
+                return String.format("%.0f", SharedPreference.prefs.getInt("expensive5",0)/getTotalMoney()).toDouble() * 100
+            }
+
+            else -> {
+                return  0.0
+            }
+        }
+
+    }
 
 
 }

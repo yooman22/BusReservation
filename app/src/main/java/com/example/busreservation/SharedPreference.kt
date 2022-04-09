@@ -45,4 +45,12 @@ class PrefsManager(context: Context) {
         return prefs.getLong(key, -1)
     }
 
+    fun setInt(key: String , value : Int){
+        prefs.edit().putInt(key, value).apply()
+    }
+
+    fun  getInt(key: String , value : Long) : Int{
+        return prefs.getInt(key, -1)
+    }
+
 }
