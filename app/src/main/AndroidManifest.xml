@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BusReservation"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DogFeedList"
+            android:exported="false" />
+        <activity
             android:name=".DogList"
             android:exported="false" />
         <activity
