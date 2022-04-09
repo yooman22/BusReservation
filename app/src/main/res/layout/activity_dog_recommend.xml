@@ -1059,6 +1059,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/confirm_recommand"
                     android:text="인생 사료 결과(3.214)개"
                     android:textColor="@color/white"
                     android:textStyle="bold"
