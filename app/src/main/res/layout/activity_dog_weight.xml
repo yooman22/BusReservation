@@ -63,6 +63,7 @@
     </Button>
 
     <RelativeLayout
+        android:id="@+id/calc_View"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -122,6 +123,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/user_View"
         android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -141,15 +143,14 @@
             android:id="@+id/edit_C"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="강아지"
-            android:textStyle="bold"
-            android:layout_marginTop="200dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="200dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/edge_white"
+            android:hint="강아지"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </EditText>
+            app:layout_constraintTop_toTopOf="parent"></EditText>
 
     </RelativeLayout>
 
@@ -161,6 +162,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp">
         <TextView
+            android:id="@+id/confirm_weight"
             android:textAlignment="center"
             android:textSize="40dp"
             android:textColor="@color/white"
