@@ -49,6 +49,37 @@ class DogPage : AppCompatActivity() {
             registration.visibility = View.VISIBLE
         }
 
+        btn_map.setOnClickListener {
+            val nextIntent = Intent(this, DogMap::class.java)
+            startActivity(nextIntent)
+        }
+
+        btn_shower.setOnClickListener {
+            val nextIntent = Intent(this, DogShower::class.java)
+            startActivity(nextIntent)
+        }
+
+        btn_weight.setOnClickListener {
+            val nextIntent = Intent(this, DogWeight::class.java)
+            startActivity(nextIntent)
+        }
+
+        btn_heart.setOnClickListener {
+            val nextIntent = Intent(this, DogHeart::class.java)
+            startActivity(nextIntent)
+        }
+
+        btn_expensive.setOnClickListener {
+            val nextIntent = Intent(this, DogTotalMoney::class.java)
+            startActivity(nextIntent)
+        }
+
+        btn_recommand.setOnClickListener {
+            val nextIntent = Intent(this, DogRecommend::class.java)
+            startActivity(nextIntent)
+        }
+
+
         val usaGdpSeries = LineSeries()
         usaGdpSeries.displayName = "USA"
         usaGdpSeries.data = GdpData(

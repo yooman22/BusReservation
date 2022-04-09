@@ -172,6 +172,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/btn_map"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
@@ -180,6 +181,7 @@
                         android:src="@drawable/search"></ImageView>
 
                     <ImageView
+                        android:id="@+id/btn_shower"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
@@ -188,6 +190,7 @@
                         android:src="@drawable/search"></ImageView>
 
                     <ImageView
+                        android:id="@+id/btn_weight"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
@@ -196,6 +199,7 @@
                         android:src="@drawable/search"></ImageView>
 
                     <ImageView
+                        android:id="@+id/btn_heart"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
@@ -204,6 +208,7 @@
                         android:src="@drawable/search"></ImageView>
 
                     <ImageView
+                        android:id="@+id/btn_expensive"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
@@ -212,6 +217,7 @@
                         android:src="@drawable/search"></ImageView>
 
                     <ImageView
+                        android:id="@+id/btn_recommand"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
