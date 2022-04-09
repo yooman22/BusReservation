@@ -32,9 +32,9 @@ class DogWeight : AppCompatActivity() {
 
         confirm_weight.setOnClickListener {
 
-            var weight_dog = edit_A.text.toString().toLong() - edit_B.text.toString().toLong()
-
             if(calc_View.visibility == View.VISIBLE) {
+
+                var weight_dog = edit_A.text.toString().toLong() - edit_B.text.toString().toLong()
 
                 if (weight_dog < 0 || edit_A.text.toString().isNullOrEmpty() ||  edit_B.text.toString().isNullOrEmpty()  ) {
                     Toast.makeText(this, "잘못된 입력 입니다.", Toast.LENGTH_LONG).show()
@@ -42,7 +42,7 @@ class DogWeight : AppCompatActivity() {
                 }
 
                 SharedPreference.prefs.setString("dog_weight",weight_dog.toString())
-
+                finish()
             }
 
             if(user_View.visibility == View.VISIBLE){
@@ -53,7 +53,7 @@ class DogWeight : AppCompatActivity() {
                 }
 
                 SharedPreference.prefs.setString("dog_weight",edit_C.text.toString())
-
+                finish()
             }
 
 

@@ -68,8 +68,8 @@ class DogRegistrationThree : AppCompatActivity() {
 
         baby_no.setOnClickListener{
             baby = false
-            baby_yes.background = getResources().getDrawable(R.drawable.edge_green_btn)
-            baby_no.background = getResources().getDrawable(R.drawable.edge)
+            baby_yes.background = getResources().getDrawable(R.drawable.edge)
+            baby_no.background = getResources().getDrawable(R.drawable.edge_green_btn)
         }
 
         hour_yes.setOnClickListener{
@@ -80,18 +80,20 @@ class DogRegistrationThree : AppCompatActivity() {
 
         hour_no.setOnClickListener{
             hour = false
-            hour_yes.background = getResources().getDrawable(R.drawable.edge_green_btn)
-            hour_no.background = getResources().getDrawable(R.drawable.edge)
+            hour_yes.background = getResources().getDrawable(R.drawable.edge)
+            hour_no.background = getResources().getDrawable(R.drawable.edge_green_btn)
         }
 
         btn_1.setOnClickListener{
 
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[0]) return@setOnClickListener
 
+            btn_1.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[0] = true
             click_count++
 
@@ -100,10 +102,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_2.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[1]) return@setOnClickListener
 
+            btn_2.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[1] = true
             click_count++
         }
@@ -111,10 +115,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_3.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[2]) return@setOnClickListener
 
+            btn_3.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[2] = true
             click_count++
         }
@@ -122,10 +128,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_4.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[3]) return@setOnClickListener
 
+            btn_4.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[3] = true
             click_count++
         }
@@ -133,10 +141,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_5.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[4]) return@setOnClickListener
 
+            btn_5.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[4] = true
             click_count++
         }
@@ -144,10 +154,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_6.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[5]) return@setOnClickListener
 
+            btn_6.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[5] = true
             click_count++
         }
@@ -155,10 +167,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_7.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[6]) return@setOnClickListener
 
+            btn_7.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[6] = true
             click_count++
         }
@@ -166,10 +180,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_8.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[7]) return@setOnClickListener
 
+            btn_8.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[7] = true
             click_count++
         }
@@ -177,10 +193,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_9.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[8]) return@setOnClickListener
 
+            btn_9.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[8] = true
             click_count++
         }
@@ -188,10 +206,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_10.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[9]) return@setOnClickListener
 
+            btn_10.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[9] = true
             click_count++
         }
@@ -199,10 +219,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_11.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[10]) return@setOnClickListener
 
+            btn_11.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[10] = true
             click_count++
         }
@@ -210,10 +232,12 @@ class DogRegistrationThree : AppCompatActivity() {
         btn_12.setOnClickListener{
             if(click_count == 3){
                 Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
 
             if(list_click[11]) return@setOnClickListener
 
+            btn_12.background = getResources().getDrawable(R.drawable.edge_green_btn)
             list_click[11] = true
             click_count++
         }
