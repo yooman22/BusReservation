@@ -32,17 +32,20 @@ class Adapter1(private val context : Context) :
         val textView: TextView
         val textView2 : TextView
         val textview3 : TextView
+        val image : ImageView
         init {
             // Define click listener for the ViewHolder's View.
             textView = view.findViewById(R.id.company_)
             textView2 = view.findViewById(R.id.item_)
             textview3 = view.findViewById(R.id.money_)
+            image = view.findViewById(R.id.feedImage)
         }
 
         fun bind(item: FeedItem){
             textView.text = item.company
             textView2.text = item.item
             textview3.text = item.price
+            image.setImageResource(item.image)
         }
     }
 

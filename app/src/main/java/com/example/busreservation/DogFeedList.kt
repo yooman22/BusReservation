@@ -27,6 +27,7 @@ class DogFeedList : AppCompatActivity() {
     var company : ArrayList<String> = arrayListOf()
     var item : ArrayList<String> = arrayListOf()
     var price : ArrayList<String> = arrayListOf()
+    var images : ArrayList<Int> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,10 +58,16 @@ class DogFeedList : AppCompatActivity() {
         price.add("20,000원")
         price.add("19,900원")
 
+        images.add(R.drawable.item1)
+        images.add(R.drawable.item2)
+        images.add(R.drawable.item3)
+        images.add(R.drawable.item4)
+        images.add(R.drawable.item5)
+
 
         for (i : Int in 0 .. 4)
         {
-            datas1.add(FeedItem(company[i],item[i], price[i],0))
+            datas1.add(FeedItem(company[i],item[i], price[i],images[i],0))
         }
 
 
@@ -73,6 +80,10 @@ class DogFeedList : AppCompatActivity() {
 
                 if(position == 0){
                     val nextIntent = Intent(baseContext, DogFeedItemInfo::class.java)
+                    nextIntent.putExtra("image",images[position])
+                    nextIntent.putExtra("company",company[position])
+                    nextIntent.putExtra("item",item[position])
+                    nextIntent.putExtra("cost",item[position])
                     startActivity(nextIntent)
                 }
 

@@ -3,6 +3,7 @@ package com.example.busreservation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Debug
 import android.view.View
 import com.devexpress.dxcharts.*
 import com.example.busreservation.data.GdpData
@@ -18,21 +19,31 @@ class DogPage : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        if( SharedPreference.prefs.getBigInteger("showerDate",0) == 0.toLong()){
+        System.out.println("현재 시간 : " + System.currentTimeMillis().toString())
+
+        System.out.println( "샤워 시간 : " + SharedPreference.prefs.getBigInteger("showerDate",0).toString())
+
+        var showerDate = System.currentTimeMillis() - SharedPreference.prefs.getBigInteger(
+            "showerDate",
+            0
+        )
+
+        if( showerDate < 24 * 60 * 60 * 1000){
             txt_shower_date.setText("오늘")
         }else {
             txt_shower_date.setText(
-                ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger(
-                    "showerDate",
-                    0
-                )) / (24 * 60 * 60 * 1000)).toString() + "일전"
+                (showerDate / (24 * 60 * 60 * 1000)).toString() + "일전"
             )
         }
 
-        if(SharedPreference.prefs.getBigInteger("heartDate",0) == 0.toLong()){
+        System.out.println( "심장 시간 : " + SharedPreference.prefs.getBigInteger("heartDate",0).toString())
+
+        var heartDate = System.currentTimeMillis() - SharedPreference.prefs.getBigInteger("heartDate",0)
+
+        if(heartDate < 24 * 60 * 60 * 1000){
             txt_heart_date.setText("오늘")
         }else {
-            txt_heart_date.setText( ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger("heartDate",0)) / (24 * 60 * 60 * 1000)).toString() + "일전" )
+            txt_heart_date.setText( (heartDate / (24 * 60 * 60 * 1000)).toString() + "일전" )
         }
     }
 
@@ -50,6 +61,8 @@ class DogPage : AppCompatActivity() {
         current_date.setText(getTime)
 
         total_money.setText(getTotalMoney().toString() + "원")
+
+        System.out.println( "index 1 값 : " + getExpensiveIndex(1).toString())
 
         per1.setText(getExpensiveIndex(1).toString())
         per2.setText(getExpensiveIndex(2).toString())
@@ -73,7 +86,7 @@ class DogPage : AppCompatActivity() {
 
         txt_weight.setText(SharedPreference.prefs.getString("dog_weight","-"))
 
-        if( SharedPreference.prefs.getBigInteger("showerDate",0) == 0.toLong()){
+        if( SharedPreference.prefs.getBigInteger("showerDate",0) < 24 * 60 * 60 * 1000){
             txt_shower_date.setText("오늘")
         }else {
             txt_shower_date.setText(
@@ -84,7 +97,7 @@ class DogPage : AppCompatActivity() {
             )
         }
 
-        if(SharedPreference.prefs.getBigInteger("heartDate",0) == 0.toLong()){
+        if(SharedPreference.prefs.getBigInteger("heartDate",0) < 24 * 60 * 60 * 1000){
             txt_heart_date.setText("오늘")
         }else {
             txt_heart_date.setText( ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger("heartDate",0)) / (24 * 60 * 60 * 1000)).toString() + "일전" )
@@ -223,6 +236,8 @@ class DogPage : AppCompatActivity() {
         + SharedPreference.prefs.getInt("expensive4",0)
         + SharedPreference.prefs.getInt("expensive5",0)
 
+        if(cost == -1) return 0
+
         return cost
     }
 
@@ -231,22 +246,33 @@ class DogPage : AppCompatActivity() {
         when(index){
 
             1-> {
+
+                if(SharedPreference.prefs.getInt("expensive1",0) == -1) return 0.0
+
                 return String.format("%.0f", SharedPreference.prefs.getInt("expensive1",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             2-> {
+                if(SharedPreference.prefs.getInt("expensive2",0) == -1) return 0.0
+
                 return String.format("%.0f", SharedPreference.prefs.getInt("expensive2",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             3-> {
+                if(SharedPreference.prefs.getInt("expensive3",0) == -1) return 0.0
+
                 return String.format("%.0f", SharedPreference.prefs.getInt("expensive3",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             4-> {
+                if(SharedPreference.prefs.getInt("expensive4",0) == -1) return 0.0
+
                 return String.format("%.0f", SharedPreference.prefs.getInt("expensive4",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
             5-> {
+                if(SharedPreference.prefs.getInt("expensive5",0) == -1) return 0.0
+
                 return String.format("%.0f", SharedPreference.prefs.getInt("expensive5",0).toDouble()/getTotalMoney()).toDouble() * 100
             }
 
