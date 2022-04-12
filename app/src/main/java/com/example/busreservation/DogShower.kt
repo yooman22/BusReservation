@@ -13,7 +13,8 @@ class DogShower : AppCompatActivity() {
         setContentView(R.layout.activity_dog_shower)
 
         confirm_shower.setOnClickListener{
-            SharedPreference.prefs.getBigInteger("showerDate",now)
+            SharedPreference.prefs.setBigInteger("showerDate",now)
+            finish()
         }
 
 

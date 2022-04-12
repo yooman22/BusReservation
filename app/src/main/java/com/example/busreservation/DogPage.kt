@@ -15,6 +15,28 @@ import kotlin.collections.ArrayList
 
 class DogPage : AppCompatActivity() {
 
+    override fun onResume() {
+        super.onResume()
+
+        if( SharedPreference.prefs.getBigInteger("showerDate",0) == 0.toLong()){
+            txt_shower_date.setText("오늘")
+        }else {
+            txt_shower_date.setText(
+                ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger(
+                    "showerDate",
+                    0
+                )) / (24 * 60 * 60 * 1000)).toString() + "일전"
+            )
+        }
+
+        if(SharedPreference.prefs.getBigInteger("heartDate",0) == 0.toLong()){
+            txt_heart_date.setText("오늘")
+        }else {
+            txt_heart_date.setText( ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger("heartDate",0)) / (24 * 60 * 60 * 1000)).toString() + "일전" )
+        }
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dog_page)
@@ -52,20 +74,20 @@ class DogPage : AppCompatActivity() {
         txt_weight.setText(SharedPreference.prefs.getString("dog_weight","-"))
 
         if( SharedPreference.prefs.getBigInteger("showerDate",0) == 0.toLong()){
-            txt_shower_date.setText("-")
+            txt_shower_date.setText("오늘")
         }else {
             txt_shower_date.setText(
                 ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger(
                     "showerDate",
                     0
-                )) / (24 * 60 * 60 * 1000)).toString() + "일"
+                )) / (24 * 60 * 60 * 1000)).toString() + "일전"
             )
         }
 
         if(SharedPreference.prefs.getBigInteger("heartDate",0) == 0.toLong()){
-            txt_heart_date.setText("-")
+            txt_heart_date.setText("오늘")
         }else {
-            txt_heart_date.setText( ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger("heartDate",0)) / (24 * 60 * 60 * 1000)).toString() + "일" )
+            txt_heart_date.setText( ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger("heartDate",0)) / (24 * 60 * 60 * 1000)).toString() + "일전" )
         }
 
 

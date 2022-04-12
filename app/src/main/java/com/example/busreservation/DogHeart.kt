@@ -13,7 +13,8 @@ class DogHeart : AppCompatActivity() {
         setContentView(R.layout.activity_dog_heart)
 
         confirm_heart.setOnClickListener {
-            SharedPreference.prefs.getBigInteger("heartDate",now)
+            SharedPreference.prefs.setBigInteger("heartDate",now)
+            finish()
         }
 
     }
