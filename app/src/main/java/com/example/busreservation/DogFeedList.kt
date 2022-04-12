@@ -60,7 +60,7 @@ class DogFeedList : AppCompatActivity() {
 
         for (i : Int in 0 .. 4)
         {
-            datas1.add(FeedItem(company[i],item[i], price[i],1))
+            datas1.add(FeedItem(company[i],item[i], price[i],0))
         }
 
 
@@ -72,7 +72,7 @@ class DogFeedList : AppCompatActivity() {
             override fun onClick(v: View, position: Int) {
 
                 if(position == 0){
-                    val nextIntent = Intent(baseContext, DogInfo::class.java)
+                    val nextIntent = Intent(baseContext, DogFeedItemInfo::class.java)
                     startActivity(nextIntent)
                 }
 
