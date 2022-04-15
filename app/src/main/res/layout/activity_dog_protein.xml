@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DogProtein">
+
+    <TextView
+        android:id="@+id/title_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:text="좋아하는 단백질원"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_food1"
+            android:text="소고기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:background="@drawable/edge"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_food2"
+            android:text="닭고기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_food3"
+            android:text="생선"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:background="@drawable/edge"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_food4"
+            android:text="칠면조"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_food5"
+            android:text="양고기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:background="@drawable/edge"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_food6"
+            android:text="돼지고기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_food7"
+            android:text="오리고기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:background="@drawable/edge"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_food8"
+            android:text="사슴고기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_food9"
+            android:text="토끼고기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:background="@drawable/edge"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_food10"
+            android:text="식물성 단백질"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/edge"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+        </Button>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm"
+        android:text="선택완료"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@drawable/edge_green_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+    </Button>
+
+</LinearLayout>

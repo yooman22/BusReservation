@@ -81,12 +81,12 @@
                 <Button
 
                     android:text="건식사료"
-                    android:textColor="@color/green"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20dp"
                     android:textAlignment="center"
                     android:drawableLeft="@drawable/button"
-                    android:background="@drawable/edge_green_btn"
+                    android:background="@drawable/edge"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
@@ -120,12 +120,12 @@
                 <Button
 
                     android:text="습식사료"
-                    android:textColor="@color/green"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20dp"
                     android:textAlignment="center"
                     android:drawableLeft="@drawable/button"
-                    android:background="@drawable/edge_green_btn"
+                    android:background="@drawable/edge"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
@@ -159,12 +159,12 @@
                 <Button
 
                     android:text="처방식사료"
-                    android:textColor="@color/green"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20dp"
                     android:textAlignment="center"
                     android:drawableLeft="@drawable/button"
-                    android:background="@drawable/edge_green_btn"
+                    android:background="@drawable/edge"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
@@ -261,7 +261,8 @@
                 android:orientation="horizontal">
 
 
-                <ImageView
+                <Button
+                    android:id="@+id/favor1"
                     android:textColor="@color/green"
                     android:textAlignment="center"
                     android:background="@drawable/edge_green_btn"
@@ -269,9 +270,10 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
-                </ImageView>
+                </Button>
 
-                <ImageView
+                <Button
+                    android:id="@+id/favor2"
                     android:visibility="invisible"
                     android:textColor="@color/green"
                     android:textAlignment="center"
@@ -281,9 +283,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
-                </ImageView>
+                </Button>
 
-                <ImageView
+                <Button
+                    android:id="@+id/favor3"
                     android:visibility="invisible"
                     android:textColor="@color/green"
                     android:textAlignment="center"
@@ -293,9 +296,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
-                </ImageView>
+                </Button>
 
-                <ImageView
+                <Button
+                    android:id="@+id/favor4"
                     android:visibility="invisible"
                     android:textColor="@color/green"
                     android:textAlignment="center"
@@ -305,7 +309,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
-                </ImageView>
+                </Button>
 
             </LinearLayout>
 
@@ -353,7 +357,8 @@
                 android:orientation="horizontal">
 
 
-                <ImageView
+                <Button
+                    android:id="@+id/hate1"
                     android:textColor="@color/green"
                     android:textAlignment="center"
                     android:background="@drawable/edge_green_btn"
@@ -361,9 +366,10 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
-                </ImageView>
+                </Button>
 
-                <ImageView
+                <Button
+                    android:id="@+id/hate2"
                     android:visibility="invisible"
                     android:textColor="@color/green"
                     android:textAlignment="center"
@@ -373,9 +379,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
-                </ImageView>
+                </Button>
 
-                <ImageView
+                <Button
+                    android:id="@+id/hate3"
                     android:visibility="invisible"
                     android:textColor="@color/green"
                     android:textAlignment="center"
@@ -385,9 +392,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
-                </ImageView>
+                </Button>
 
-                <ImageView
+                <Button
+                    android:id="@+id/hate4"
                     android:visibility="invisible"
                     android:textColor="@color/green"
                     android:textAlignment="center"
@@ -397,7 +405,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
-                </ImageView>
+                </Button>
 
             </LinearLayout>
 

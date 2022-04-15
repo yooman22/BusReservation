@@ -97,10 +97,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:layout_marginTop="210dp"
                     android:layout_marginRight="225dp"
                     android:src="@drawable/ideas"
-                    android:layout_alignParentRight="true"
                     android:text="태어난지"
                     android:textSize="15dp"
                     android:textStyle="bold"></TextView>
