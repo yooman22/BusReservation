@@ -31,6 +31,7 @@ class DogRegistrationThree : AppCompatActivity() {
         confirm2.setOnClickListener{
 
             SharedPreference.prefs.setBool("Save",true);
+            SharedPreference.prefs.setInt("dateMonth",0);
 
             val nextIntent = Intent(this, DogPage::class.java)
             startActivity(nextIntent)

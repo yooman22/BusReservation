@@ -16,6 +16,8 @@ import kotlin.collections.ArrayList
 
 class DogPage : AppCompatActivity() {
 
+    val now = System.currentTimeMillis()
+
     override fun onResume() {
         super.onResume()
 
@@ -30,7 +32,11 @@ class DogPage : AppCompatActivity() {
 
         if( showerDate < 24 * 60 * 60 * 1000){
             txt_shower_date.setText("오늘")
-        }else {
+        }
+        else if(showerDate > now){
+            txt_shower_date.setText("-")
+        }
+        else {
             txt_shower_date.setText(
                 (showerDate / (24 * 60 * 60 * 1000)).toString() + "일전"
             )
@@ -42,7 +48,11 @@ class DogPage : AppCompatActivity() {
 
         if(heartDate < 24 * 60 * 60 * 1000){
             txt_heart_date.setText("오늘")
-        }else {
+        }
+        else if(heartDate> now){
+            txt_heart_date.setText("-")
+        }
+        else {
             txt_heart_date.setText( (heartDate / (24 * 60 * 60 * 1000)).toString() + "일전" )
         }
     }
@@ -52,7 +62,7 @@ class DogPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dog_page)
 
-        val now = System.currentTimeMillis()
+
         val date = Date(now)
         var sdf : SimpleDateFormat = SimpleDateFormat("yyyy년 MM월 dd일");
 
@@ -61,6 +71,17 @@ class DogPage : AppCompatActivity() {
         current_date.setText(getTime)
 
         total_money.setText(getTotalMoney().toString() + "원")
+
+        var dateMonth = SharedPreference.prefs.getInt("dateMonth",0)
+
+
+        if(dateMonth == -1){
+            dog_date.setText("0")
+            baby_age.setText("0")
+        }else {
+            dog_date.setText(dateMonth.toString())
+            baby_age.setText((dateMonth*5/3).toString())
+        }
 
         System.out.println( "index 1 값 : " + getExpensiveIndex(1).toString())
 
@@ -88,7 +109,11 @@ class DogPage : AppCompatActivity() {
 
         if( SharedPreference.prefs.getBigInteger("showerDate",0) < 24 * 60 * 60 * 1000){
             txt_shower_date.setText("오늘")
-        }else {
+        }
+        else if(SharedPreference.prefs.getBigInteger("showerDate",0) > now){
+            txt_shower_date.setText("-")
+        }
+        else {
             txt_shower_date.setText(
                 ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger(
                     "showerDate",
@@ -99,7 +124,11 @@ class DogPage : AppCompatActivity() {
 
         if(SharedPreference.prefs.getBigInteger("heartDate",0) < 24 * 60 * 60 * 1000){
             txt_heart_date.setText("오늘")
-        }else {
+        }
+        else if(SharedPreference.prefs.getBigInteger("heartDate",0) > now){
+            txt_shower_date.setText("-")
+        }
+        else {
             txt_heart_date.setText( ((System.currentTimeMillis() - SharedPreference.prefs.getBigInteger("heartDate",0)) / (24 * 60 * 60 * 1000)).toString() + "일전" )
         }
 
