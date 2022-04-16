@@ -134,6 +134,132 @@ class DogRecommend : AppCompatActivity() {
             startForResult_hate.launch(nextIntent)
         }
 
+        feed1.setOnClickListener {
+            feed1.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+        feed2.setOnClickListener {
+            feed2.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+        feed3.setOnClickListener {
+            feed3.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+        feed4.setOnClickListener {
+            feed4.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+        feed5.setOnClickListener {
+            feed5.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+        feed6.setOnClickListener {
+            feed6.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        health1.setOnClickListener {
+            health1.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        health2.setOnClickListener {
+            health2.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        health3.setOnClickListener {
+            health3.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        health4.setOnClickListener {
+            health4.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient1.setOnClickListener {
+            ingredient1.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient2.setOnClickListener {
+            ingredient2.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient3.setOnClickListener {
+            ingredient3.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient4.setOnClickListener {
+            ingredient4.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient5.setOnClickListener {
+            ingredient5.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient6.setOnClickListener {
+            ingredient6.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient7.setOnClickListener {
+            ingredient7.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient8.setOnClickListener {
+            ingredient8.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient9.setOnClickListener {
+            ingredient9.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+
+        ingredient10.setOnClickListener {
+            ingredient10.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient11.setOnClickListener {
+            ingredient11.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient12.setOnClickListener {
+            ingredient12.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient13.setOnClickListener {
+            ingredient13.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient14.setOnClickListener {
+            ingredient14.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient15.setOnClickListener {
+            ingredient15.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient16.setOnClickListener {
+            ingredient16.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient17.setOnClickListener {
+            ingredient17.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient18.setOnClickListener {
+            ingredient18.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient19.setOnClickListener {
+            ingredient19.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
+        ingredient20.setOnClickListener {
+            ingredient20.setBackgroundResource(R.drawable.edge_green_btn)
+
+        }
+
     }
 
 
@@ -249,6 +375,8 @@ class DogRecommend : AppCompatActivity() {
             }
         }
     }
+
+
 
 
 }

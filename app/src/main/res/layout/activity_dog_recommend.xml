@@ -79,7 +79,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/feed1"
                     android:text="건식사료"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -95,6 +95,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/feed2"
                     android:text="소프트사료"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -118,7 +119,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/feed3"
                     android:text="습식사료"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -134,6 +135,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/feed4"
                     android:text="자연식사료"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -157,7 +159,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/feed5"
                     android:text="처방식사료"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -173,6 +175,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/feed6"
                     android:text="기타사료"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -474,7 +477,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/health1"
                     android:text="임신/수유"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -490,6 +493,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/health2"
                     android:text="비만"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -512,7 +516,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/health3"
                     android:text="노령"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -528,6 +532,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/health4"
                     android:text="성장기(대형견)"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -657,13 +662,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient1"
                     android:text="위장"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20dp"
                     android:textAlignment="center"
-
                     android:background="@drawable/edge"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="10dp"
@@ -673,6 +677,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient2"
                     android:text="관절/뼈"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -695,7 +700,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient3"
                     android:text="심장"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -711,6 +716,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient4"
                     android:text="피부"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -733,7 +739,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient5"
                     android:text="지질장애"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -749,6 +755,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient6"
                     android:text="당뇨"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -771,7 +778,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient7"
                     android:text="항산화"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -787,6 +794,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient8"
                     android:text="체지방 감소"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -809,7 +817,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient9"
                     android:text="면역"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -825,6 +833,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient10"
                     android:text="인지장애"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -847,7 +856,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient11"
                     android:text="면역"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -863,6 +872,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient12"
                     android:text="인지장애"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -885,7 +895,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient13"
                     android:text="신장/요로"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -901,6 +911,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient14"
                     android:text="간"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -923,7 +934,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient15"
                     android:text="피로"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -939,6 +950,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient16"
                     android:text="알레르기"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -961,7 +973,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient17"
                     android:text="눈"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -977,6 +989,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient18"
                     android:text="행동"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -999,7 +1012,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-
+                    android:id="@+id/ingredient19"
                     android:text="운동"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -1015,6 +1028,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/ingredient20"
                     android:text="구강"
                     android:textColor="@color/black"
                     android:textStyle="bold"
