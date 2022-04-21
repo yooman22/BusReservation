@@ -23,9 +23,11 @@ class DogProtein : AppCompatActivity() {
             var type = intent.getIntExtra("type"+i+1,-1)
             if(type == 0){
                 hate_Count++
+                setViewRed(i+1)
             }
             else if(type == 1){
                 favor_Count++
+                setViewGreen(i+1)
             }
             dogTypeList_.add(type)
         }
@@ -44,7 +46,7 @@ class DogProtein : AppCompatActivity() {
         }
         
         btn_food1.setOnClickListener {
-            if(dogScreenList_[0]|| favor_Count == 4 || hate_Count == 4){
+            if(dogScreenList_[0] || favor_Count == 4 || hate_Count == 4){
                 Toast.makeText(this,"선택이 불가능 합니다.",Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
@@ -246,12 +248,45 @@ class DogProtein : AppCompatActivity() {
 
         confirm.setOnClickListener {
             for(i : Int in 0 .. 9) {
-                intent.putExtra("btn"+i+1,false)
-                intent.putExtra("type"+i+1,-1)
+                intent.putExtra("btn"+i+1,dogScreenList_[i])
+                intent.putExtra("type"+i+1,dogTypeList_[i])
             }
+            setResult(AppCompatActivity.RESULT_OK, intent)
             finish()
         }
 
 
+
     }
+
+    fun setViewGreen(i : Int){
+        when(i){
+            1-> btn_food1.setBackgroundResource(R.drawable.edge_green_btn)
+            2-> btn_food2.setBackgroundResource(R.drawable.edge_green_btn)
+            3-> btn_food3.setBackgroundResource(R.drawable.edge_green_btn)
+            4-> btn_food4.setBackgroundResource(R.drawable.edge_green_btn)
+            5-> btn_food5.setBackgroundResource(R.drawable.edge_green_btn)
+            6-> btn_food6.setBackgroundResource(R.drawable.edge_green_btn)
+            7-> btn_food7.setBackgroundResource(R.drawable.edge_green_btn)
+            8-> btn_food8.setBackgroundResource(R.drawable.edge_green_btn)
+            9-> btn_food9.setBackgroundResource(R.drawable.edge_green_btn)
+            10-> btn_food10.setBackgroundResource(R.drawable.edge_green_btn)
+        }
+    }
+
+    fun setViewRed(i : Int){
+        when(i){
+            1-> btn_food1.setBackgroundResource(R.drawable.edge_red_btn)
+            2-> btn_food2.setBackgroundResource(R.drawable.edge_red_btn)
+            3-> btn_food3.setBackgroundResource(R.drawable.edge_red_btn)
+            4-> btn_food4.setBackgroundResource(R.drawable.edge_red_btn)
+            5-> btn_food5.setBackgroundResource(R.drawable.edge_red_btn)
+            6-> btn_food6.setBackgroundResource(R.drawable.edge_red_btn)
+            7-> btn_food7.setBackgroundResource(R.drawable.edge_red_btn)
+            8-> btn_food8.setBackgroundResource(R.drawable.edge_red_btn)
+            9-> btn_food9.setBackgroundResource(R.drawable.edge_red_btn)
+            10-> btn_food10.setBackgroundResource(R.drawable.edge_red_btn)
+        }
+    }
+
 }

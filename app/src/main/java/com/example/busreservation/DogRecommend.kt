@@ -53,27 +53,30 @@ class DogRecommend : AppCompatActivity() {
 
                 if(dogProteinList[i].type == 0)
                 {
-                    dogHateList.add(dogFavorList[i])
+                    dogHateList.add(dogProteinList[i])
                     hateCount++
                 }
                 else if(dogProteinList[i].type == 1)
                 {
-                    dogFavorList.add(dogFavorList[i])
+                    dogFavorList.add(dogProteinList[i])
                     favorCount++
                 }
 
             }
 
-            favorView(false,0)
-
             var count = dogFavorList.count()
+
+            if(count==0){
+                favorView(false,0)
+            }
 
             if(count !=0){
                 favorView(true,count)
                 setFavorView(count,dogFavorList)
             }
 
-
+            dogHateList.clear()
+            dogFavorList.clear()
 
 
             }
@@ -101,25 +104,29 @@ class DogRecommend : AppCompatActivity() {
 
                 if(dogProteinList[i].type == 0)
                 {
-                    dogHateList.add(dogFavorList[i])
+                    dogHateList.add(dogProteinList[i])
                     hateCount++
                 }
                 else if(dogProteinList[i].type == 1)
                 {
-                    dogFavorList.add(dogFavorList[i])
+                    dogFavorList.add(dogProteinList[i])
                     favorCount++
                 }
             }
 
-            hateView(false,0)
-
             var count = dogHateList.count()
+
+            if(count == 0){
+                hateView(false,0)
+            }
 
             if(count !=0){
                 hateView(true,count)
                 setHateView(count,dogHateList)
             }
 
+            dogHateList.clear()
+            dogFavorList.clear()
 
             }
         }
