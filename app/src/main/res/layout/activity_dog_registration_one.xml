@@ -152,7 +152,7 @@
 
     <ImageView
         android:id="@+id/datepicker"
-        android:src="@drawable/ideas"
+        android:src="@drawable/calendar"
         android:layout_marginTop="300dp"
         android:layout_marginLeft="350dp"
         android:layout_width="30dp"
