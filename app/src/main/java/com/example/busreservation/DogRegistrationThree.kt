@@ -6,12 +6,18 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_dog_registration_three.*
 import kotlinx.android.synthetic.main.activity_dog_registration_two.*
+import server.conn.ServerAPI
 
 class DogRegistrationThree : AppCompatActivity() {
 
     var baby = false
     var hour = false
     var allergy = false
+
+    var list : List<String> = listOf("알레르기","장","치아/구강","비만","뼈/관절","피부/모질","노령","신장/요로","호흡기","심장","당뇨","눈/귀","행동")
+
+    // 12 버튼 갯수 확인
+    var list_click = mutableListOf<Boolean>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,26 +34,52 @@ class DogRegistrationThree : AppCompatActivity() {
         name_.setText(name)
         date_.setText(name+","+date)
 
-        confirm2.setOnClickListener{
-
-            SharedPreference.prefs.setBool("Save",true);
-            SharedPreference.prefs.setInt("dateMonth",0);
-
-            val nextIntent = Intent(this, DogPage::class.java)
-            startActivity(nextIntent)
-        }
-
-        var list : List<String> = listOf("알레르기","장","치아/구강","비만","뼈/관절","피부/모질","노령","신장/요로","호흡기","심장","당뇨","눈/귀","행동")
-
-        // 12 버튼 갯수 확인
-        var list_click = mutableListOf<Boolean>()
-
         for(i: Int in 1..12 ){
             list_click.add(false)
         }
 
         var click_count = 0;
 
+        confirm2.setOnClickListener{
+
+            SharedPreference.prefs.setBool("Save",true);
+            SharedPreference.prefs.setInt("dateMonth",0);
+
+            var hashMap  = HashMap<String,String>()
+
+            hashMap.put("name",name.toString());
+            hashMap.put("date",date.toString());
+
+            hashMap.put("weight",weight.toString());
+            hashMap.put("gander",gander.toString());
+            hashMap.put("animal",animal.toString());
+            hashMap.put("neutrality",neutrality.toString());
+            hashMap.put("dateMonth",dateMonth.toString());
+
+            hashMap.put("allergy",allergy.toString());
+            hashMap.put("hour",hour.toString());
+            hashMap.put("allergy",allergy.toString());
+
+            var trueList : String = ""
+            var trueCount = 0
+            for(i: Int in 0..12 ){
+                if(list_click[i]){
+                    trueCount++
+                    trueList += list[i].toString()
+                    if(click_count > trueCount){
+                        trueList += ","
+                    }
+                }
+            }
+            hashMap.put("trueList",trueList);
+
+            var serverAPI: ServerAPI = ServerAPI(7,hashMap);
+            serverAPI.start();
+            serverAPI.join();
+
+            val nextIntent = Intent(this, DogPage::class.java)
+            startActivity(nextIntent)
+        }
 
         allergy_yes.setOnClickListener{
             allergy = true
