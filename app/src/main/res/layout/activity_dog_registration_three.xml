@@ -76,40 +76,20 @@
                 app:layout_constraintTop_toTopOf="parent">
             </TextView>
 
-            <ImageView
-                android:src="@drawable/ideas"
-                android:layout_marginTop="80dp"
-                android:layout_marginLeft="70dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            </ImageView>
-
-            <ImageView
-                android:src="@drawable/ideas"
-                android:layout_marginTop="80dp"
-                android:layout_marginLeft="110dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            </ImageView>
-
-            <ImageView
-                android:src="@drawable/ideas"
-                android:layout_marginTop="80dp"
-                android:layout_marginLeft="150dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            </ImageView>
+                <ImageView
+                    android:src="@drawable/three"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </ImageView>
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 

@@ -9,7 +9,6 @@
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:text="계산기"
         android:textStyle="bold"
         android:src="@drawable/ideas"
         android:layout_marginTop="10dp"

@@ -48,7 +48,7 @@
                     android:layout_height="150dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:src="@drawable/search"
+                    android:src="@drawable/mainicon"
                     app:civ_border_color="@color/design_default_color_primary_dark"
 
                     app:civ_border_width="2dp"
@@ -59,10 +59,9 @@
                     android:layout_height="wrap_content">
 
                     <View
-                        android:layout_weight="1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                    </View>
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"></View>
 
                     <TextView
                         android:id="@+id/name"
@@ -86,10 +85,9 @@
                         android:textStyle="bold"></ImageView>
 
                     <View
-                        android:layout_weight="1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                    </View>
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"></View>
 
                 </LinearLayout>
 
@@ -181,7 +179,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="60dp"
                         android:layout_marginTop="280dp"
-                        android:src="@drawable/search"></ImageView>
+                        android:src="@drawable/icon6"></ImageView>
 
                     <ImageView
                         android:id="@+id/btn_shower"
@@ -190,7 +188,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="110dp"
                         android:layout_marginTop="280dp"
-                        android:src="@drawable/search"></ImageView>
+                        android:src="@drawable/icon5"></ImageView>
 
                     <ImageView
                         android:id="@+id/btn_weight"
@@ -199,7 +197,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="160dp"
                         android:layout_marginTop="280dp"
-                        android:src="@drawable/search"></ImageView>
+                        android:src="@drawable/icon4"></ImageView>
 
                     <ImageView
                         android:id="@+id/btn_heart"
@@ -208,7 +206,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="210dp"
                         android:layout_marginTop="280dp"
-                        android:src="@drawable/search"></ImageView>
+                        android:src="@drawable/icon3"></ImageView>
 
                     <ImageView
                         android:id="@+id/btn_expensive"
@@ -217,7 +215,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="260dp"
                         android:layout_marginTop="280dp"
-                        android:src="@drawable/search"></ImageView>
+                        android:src="@drawable/icon2"></ImageView>
 
                     <ImageView
                         android:id="@+id/btn_recommand"
@@ -226,7 +224,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="310dp"
                         android:layout_marginTop="280dp"
-                        android:src="@drawable/search"></ImageView>
+                        android:src="@drawable/icon1"></ImageView>
 
                 </RelativeLayout>
 

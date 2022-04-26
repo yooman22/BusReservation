@@ -35,7 +35,7 @@
             android:layout_height="100dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/ideas"></ImageView>
+            android:src="@drawable/dog_list"></ImageView>
 
         <ImageView
             android:src="@drawable/ideas"
