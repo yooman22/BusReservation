@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.android.material.shadow.ShadowRenderer
 import kotlinx.android.synthetic.main.activity_dog_registration_three.*
 import kotlinx.android.synthetic.main.activity_dog_registration_two.*
 import server.conn.ServerAPI
@@ -34,7 +35,7 @@ class DogRegistrationThree : AppCompatActivity() {
         name_.setText(name)
         date_.setText(name+","+date)
 
-        for(i: Int in 1..12 ){
+        for(i: Int in 1..13 ){
             list_click.add(false)
         }
 
@@ -42,8 +43,14 @@ class DogRegistrationThree : AppCompatActivity() {
 
         confirm2.setOnClickListener{
 
-            SharedPreference.prefs.setBool("Save",true);
-            SharedPreference.prefs.setInt("dateMonth",0);
+            SharedPreference.prefs.setBool("Save",true)
+            SharedPreference.prefs.setInt("dateMonth",dateMonth)
+            SharedPreference.prefs.setString("name",name!!)
+            SharedPreference.prefs.setString("date",date!!)
+            SharedPreference.prefs.setString("weight",weight!!)
+            SharedPreference.prefs.setBool("gander",gander)
+            SharedPreference.prefs.setBool("animal",animal)
+            SharedPreference.prefs.setBool("neutrality",neutrality)
 
             var hashMap  = HashMap<String,String>()
 
@@ -77,7 +84,9 @@ class DogRegistrationThree : AppCompatActivity() {
             serverAPI.start();
             serverAPI.join();
 
+            finishAffinity()
             val nextIntent = Intent(this, DogPage::class.java)
+            nextIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(nextIntent)
         }
 
@@ -275,5 +284,17 @@ class DogRegistrationThree : AppCompatActivity() {
             click_count++
         }
 
+        btn_13.setOnClickListener{
+            if(click_count == 3){
+                Toast.makeText(this,"3개 선적이 끝났습니다.",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
+            if(list_click[12]) return@setOnClickListener
+
+            btn_13.background = getResources().getDrawable(R.drawable.edge_green_btn)
+            list_click[12] = true
+            click_count++
+        }
     }
 }

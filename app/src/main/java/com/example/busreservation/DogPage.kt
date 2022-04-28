@@ -55,6 +55,17 @@ class DogPage : AppCompatActivity() {
         else {
             txt_heart_date.setText( (heartDate / (24 * 60 * 60 * 1000)).toString() + "일전" )
         }
+
+        txt_weight.setText(SharedPreference.prefs.getString("dog_weight","-"))
+
+        var dateMonth = SharedPreference.prefs.getInt("dateMonth",0)
+        if(dateMonth == -1){
+            dog_date.setText("")
+            baby_age.setText("")
+        }else {
+            dog_date.setText(dateMonth.toString() + " 개월")
+            baby_age.setText((dateMonth*5/3).toString() + " 살")
+        }
     }
 
 
@@ -166,7 +177,7 @@ class DogPage : AppCompatActivity() {
 
 
         val usaGdpSeries = LineSeries()
-        usaGdpSeries.displayName = "USA"
+        usaGdpSeries.displayName = "뭄무게"
         usaGdpSeries.data = GdpData(
             ArrayList(
                 Arrays.asList(
@@ -184,44 +195,6 @@ class DogPage : AppCompatActivity() {
         chart.addSeries(usaGdpSeries)
 
 
-
-        val chinaGdpSeries = LineSeries()
-        chinaGdpSeries.displayName = "China"
-        chinaGdpSeries.data = GdpData(
-            ArrayList(
-                Arrays.asList(
-                    GdpValue(2008, 4.598),
-                    GdpValue(2009, 5.11),
-                    GdpValue(2010, 6.101),
-                    GdpValue(2011, 7.573),
-                    GdpValue(2012, 8.561),
-                    GdpValue(2013, 9.607),
-                    GdpValue(2014, 10.482),
-                    GdpValue(2015, 11.065)
-                )
-            )
-        )
-        chart.addSeries(chinaGdpSeries)
-
-        val japanGdpSeries = LineSeries()
-        japanGdpSeries.displayName = "Japan"
-        japanGdpSeries.data = GdpData(
-            ArrayList(
-                Arrays.asList(
-                    GdpValue(2008, 5.038),
-                    GdpValue(2009, 5.231),
-                    GdpValue(2010, 5.7),
-                    GdpValue(2011, 6.157),
-                    GdpValue(2012, 6.203),
-                    GdpValue(2013, 5.156),
-                    GdpValue(2014, 4.849),
-                    GdpValue(2015, 4.383)
-                )
-            )
-        )
-        chart.addSeries(japanGdpSeries)
-
-
         val xAxis = NumericAxisX()
         xAxis.gridAlignment = 1.0
         //xAxis.gridOffset = 0.0
@@ -232,7 +205,7 @@ class DogPage : AppCompatActivity() {
         chart.axisY = yAxis
 
         val axisLabel = AxisLabel()
-        axisLabel.textFormat = "$ # tn"
+        axisLabel.textFormat = " # kg"
         yAxis.label = axisLabel
 
         val legend = Legend()

@@ -470,7 +470,7 @@
                 </Button>
 
                 <Button
-                    android:id="@+id/btn_13s"
+                    android:id="@+id/btn_13"
                     android:text="행동"
                     android:textColor="@color/green"
                     android:textStyle="bold"

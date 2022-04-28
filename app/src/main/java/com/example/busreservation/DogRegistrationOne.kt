@@ -86,6 +86,7 @@ class DogRegistrationOne : AppCompatActivity() {
                     nextIntent.putExtra("dateMonth",DateMonth)
 
                     startActivity(nextIntent)
+                    //finish()
                 }
 
             }

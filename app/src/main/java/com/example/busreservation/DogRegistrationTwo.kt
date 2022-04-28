@@ -36,12 +36,13 @@ class DogRegistrationTwo : AppCompatActivity() {
                 val nextIntent = Intent(this, DogRegistrationThree::class.java)
                 nextIntent.putExtra("name",name.getText().toString())
                 nextIntent.putExtra("date",intent.getStringExtra("date").toString())
-                nextIntent.putExtra("weight",weight.getText())
+                nextIntent.putExtra("weight",weight.getText().toString())
                 nextIntent.putExtra("gander",gander) // false 남성, true 여성
                 nextIntent.putExtra("animal",dogcat) // true 강아지,false 고양이
                 nextIntent.putExtra("neutrality",yesno) // 중성화 yes , 중성화 no
                 nextIntent.putExtra("dateMonth",intent.getIntExtra("dateMonth",-1))
                 startActivity(nextIntent)
+                //finish()
             }
 
         }
