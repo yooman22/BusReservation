@@ -364,7 +364,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="심장시상충"
+                        android:text="몸무게 그래프"
                         android:textColor="@color/black"
                         android:textSize="20dp">
                     </TextView>
