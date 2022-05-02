@@ -76,10 +76,14 @@ class DogPage : AppCompatActivity() {
 
         val date = Date(now)
         var sdf : SimpleDateFormat = SimpleDateFormat("yyyy년 MM월 dd일");
-
+        var sdf1 : SimpleDateFormat = SimpleDateFormat("yyyy년 MM월");
         var getTime : String = sdf.format(date);
+        var getTime1 : String = sdf1.format(date)
+        
 
         current_date.setText(getTime)
+
+        money_date.setText(getTime1 + "지출")
 
         total_money.setText(getTotalMoney().toString() + "원")
 

@@ -34,8 +34,8 @@ public class ServerAPI extends Thread{
             case 5 : requestAPI("http://jwhan402.cafe24.com/json/findPwd?"+makeQueryString()); break;
             case 6 : requestAPI("http://jwhan402.cafe24.com/json/updatePwd?"+makeQueryString()); break;
 
-            case 7 : requestAPI("http://192.168.100.4:8080/json/dogRegistration?"+makeQueryString()); break;
-            case 8 : requestAPI("http://192.168.100.4:8080/json/dogList"); break;
+            case 7 : requestAPI("http://jwhan402.cafe24.com/json/dogRegistration?"+makeQueryString()); break;
+            case 8 : requestAPI("http://jwhan402.cafe24.com/json/dogList"); break;
         }
     };
 

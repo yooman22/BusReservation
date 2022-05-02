@@ -23,9 +23,12 @@ import android.util.Log
 import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import org.json.JSONArray
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import server.conn.ServerAPI
 import kotlin.concurrent.thread
 import android.widget.ArrayAdapter as ArrayAdapter
 import android.widget.ListAdapter as ListAdapter1
@@ -46,19 +49,56 @@ class DogAdd : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dog_add)
 
+
+        var serverAPI: ServerAPI = ServerAPI(8,hashMapOf<String,String>())
+        serverAPI.start();
+        serverAPI.join();
+
+        serverAPI.getOutput()
+
+        val json = serverAPI.output
+
+        var stringBuilder : StringBuilder  = StringBuilder()
+        var jsonArray = JSONArray(json);
+
         recyclerview_departure.adapter = multiAdapter
 
         viewManager = LinearLayoutManager(this)
         recyclerview_departure.layoutManager = viewManager
 
-        val api = RetrofitClient.getInstance().create(RetrofitService::class.java)
+
+        datas1.add(DataItem("새로운 아이 등록하기","hello",0))
+
+        for( i in 0 .. jsonArray.length()-1)
+        {
+            var jsonObject = jsonArray.getJSONObject(i)
+            var name : String = jsonObject.getString("pet_name");
+            var gender : String = jsonObject.getString("gender");
+            var trueList : String = jsonObject.getString("trueList");
+            var dateMonth : String = jsonObject.getString("dateMonth")
+            var weight : String = jsonObject.getString("weight")
+            var animal : String = jsonObject.getString("animal")
+            var allergy : String = jsonObject.getString("allergy")
+            var neutrality : String = jsonObject.getString("neutrality")
+            var age : String = jsonObject.getString("age")
+            var walk : String = jsonObject.getString("walk")
+
+            datas1.add(DataItem(name,trueList,1))
+        }
+
+        multiAdapter.datas = datas1
+        multiAdapter.notifyDataSetChanged()
+
+
+
+        /*val api = RetrofitClient.getInstance().create(RetrofitService::class.java)
         val callGetLogin = api.API_List("1")
             .enqueue(object : Callback<ListVO> {
                 override fun onResponse(call: Call<ListVO>, response: Response<ListVO>) {
                     Log.d("결과", "성공 : ${response.raw()}")
                     Log.d("결과", "성공 : ${response.body()?.result}")
                     response.body()?.let {
-                        datas1.add(DataItem("하이","hello",0))
+                        datas1.add(DataItem("새로운 아이 등록하기","hello",0))
 
                         for(i in it.result) {
                             departure_id_txt.add(i.stationID)
@@ -79,7 +119,7 @@ class DogAdd : AppCompatActivity() {
                     Log.d("결과:", "실패 : $t")
                 }
             })
-
+*/
 
 
 
@@ -100,8 +140,6 @@ class DogAdd : AppCompatActivity() {
 
             }
         })
-
-
     }
 
 }
