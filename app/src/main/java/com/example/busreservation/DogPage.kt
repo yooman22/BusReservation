@@ -21,6 +21,20 @@ class DogPage : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
+        total_money.setText(getTotalMoney().toString() + "원")
+
+        per1.setText(getExpensiveIndex(1).toString())
+        per2.setText(getExpensiveIndex(2).toString())
+        per3.setText(getExpensiveIndex(3).toString())
+        per4.setText(getExpensiveIndex(4).toString())
+        per5.setText(getExpensiveIndex(5).toString())
+
+        pro1.progress = getExpensiveIndex(1)
+        pro2.progress = getExpensiveIndex(2)
+        pro3.progress = getExpensiveIndex(3)
+        pro4.progress = getExpensiveIndex(4)
+        pro5.progress = getExpensiveIndex(5)
+
         System.out.println("현재 시간 : " + System.currentTimeMillis().toString())
 
         System.out.println( "샤워 시간 : " + SharedPreference.prefs.getBigInteger("showerDate",0).toString())
@@ -106,11 +120,11 @@ class DogPage : AppCompatActivity() {
         per4.setText(getExpensiveIndex(4).toString())
         per5.setText(getExpensiveIndex(5).toString())
 
-        pro1.progress = getExpensiveIndex(1).toInt()
-        pro2.progress = getExpensiveIndex(2).toInt()
-        pro3.progress = getExpensiveIndex(3).toInt()
-        pro4.progress = getExpensiveIndex(4).toInt()
-        pro5.progress = getExpensiveIndex(5).toInt()
+        pro1.progress = getExpensiveIndex(1)
+        pro2.progress = getExpensiveIndex(2)
+        pro3.progress = getExpensiveIndex(3)
+        pro4.progress = getExpensiveIndex(4)
+        pro5.progress = getExpensiveIndex(5)
 
         if(SharedPreference.prefs.getBool("Save",false)){
             btn_list.visibility = View.VISIBLE
@@ -236,54 +250,48 @@ class DogPage : AppCompatActivity() {
     }
 
     fun getTotalMoney() : Int {
-        var cost =  SharedPreference.prefs.getInt("expensive1",0)
-        + SharedPreference.prefs.getInt("expensive2",0)
-        + SharedPreference.prefs.getInt("expensive3",0)
-        + SharedPreference.prefs.getInt("expensive4",0)
-        + SharedPreference.prefs.getInt("expensive5",0)
-
-        if(cost == -1) return 0
+        var cost =  SharedPreference.prefs.getIntzero("expensive1",0) + SharedPreference.prefs.getIntzero("expensive2",0)+ SharedPreference.prefs.getIntzero("expensive3",0)+ SharedPreference.prefs.getIntzero("expensive4",0) + SharedPreference.prefs.getIntzero("expensive5",0)
 
         return cost
     }
 
-    fun getExpensiveIndex(index : Int) : Double {
+    fun getExpensiveIndex(index : Int) : Int {
 
         when(index){
 
             1-> {
 
-                if(SharedPreference.prefs.getInt("expensive1",0) == -1) return 0.0
+                if(SharedPreference.prefs.getInt("expensive1",0) == -1) return 0
 
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive1",0).toDouble()/getTotalMoney()).toDouble() * 100
+                return ( String.format("%.2f", SharedPreference.prefs.getInt("expensive1",0).toDouble()/getTotalMoney().toDouble()).toDouble() * 100 ).toInt()
             }
 
             2-> {
-                if(SharedPreference.prefs.getInt("expensive2",0) == -1) return 0.0
+                if(SharedPreference.prefs.getInt("expensive2",0) == -1) return 0
 
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive2",0).toDouble()/getTotalMoney()).toDouble() * 100
+                return ( String.format("%.2f", SharedPreference.prefs.getInt("expensive2",0).toDouble()/getTotalMoney().toDouble()).toDouble() * 100 ).toInt()
             }
 
             3-> {
-                if(SharedPreference.prefs.getInt("expensive3",0) == -1) return 0.0
+                if(SharedPreference.prefs.getInt("expensive3",0) == -1) return 0
 
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive3",0).toDouble()/getTotalMoney()).toDouble() * 100
+                return ( String.format("%.2f", SharedPreference.prefs.getInt("expensive3",0).toDouble()/getTotalMoney().toDouble()).toDouble() * 100 ).toInt()
             }
 
             4-> {
-                if(SharedPreference.prefs.getInt("expensive4",0) == -1) return 0.0
+                if(SharedPreference.prefs.getInt("expensive4",0) == -1) return 0
 
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive4",0).toDouble()/getTotalMoney()).toDouble() * 100
+                return ( String.format("%.2f", SharedPreference.prefs.getInt("expensive4",0).toDouble()/getTotalMoney().toDouble()).toDouble() * 100 ).toInt()
             }
 
             5-> {
-                if(SharedPreference.prefs.getInt("expensive5",0) == -1) return 0.0
+                if(SharedPreference.prefs.getInt("expensive5",0) == -1) return 0
 
-                return String.format("%.0f", SharedPreference.prefs.getInt("expensive5",0).toDouble()/getTotalMoney()).toDouble() * 100
+                return ( String.format("%.2f", SharedPreference.prefs.getInt("expensive5",0).toDouble()/getTotalMoney().toDouble()).toDouble() * 100 ).toInt()
             }
 
             else -> {
-                return  0.0
+                return  0
             }
         }
 

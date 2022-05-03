@@ -52,37 +52,37 @@ class DogRegistrationThree : AppCompatActivity() {
             SharedPreference.prefs.setBool("animal",animal)
             SharedPreference.prefs.setBool("neutrality",neutrality)
 
-            var hashMap  = HashMap<String,String>()
-
-            hashMap.put("name",name.toString());
-            hashMap.put("date",date.toString());
-
-            hashMap.put("weight",weight.toString());
-            hashMap.put("gander",gander.toString());
-            hashMap.put("animal",animal.toString());
-            hashMap.put("neutrality",neutrality.toString());
-            hashMap.put("dateMonth",dateMonth.toString());
-
-            hashMap.put("allergy",allergy.toString());
-            hashMap.put("hour",hour.toString());
-            hashMap.put("allergy",allergy.toString());
-
-            var trueList : String = ""
-            var trueCount = 0
-            for(i: Int in 0..12 ){
-                if(list_click[i]){
-                    trueCount++
-                    trueList += list[i].toString()
-                    if(click_count > trueCount){
-                        trueList += ","
-                    }
-                }
-            }
-            hashMap.put("trueList",trueList);
-
-            var serverAPI: ServerAPI = ServerAPI(7,hashMap);
-            serverAPI.start();
-            serverAPI.join();
+//            var hashMap  = HashMap<String,String>()
+//
+//            hashMap.put("name",name.toString());
+//            hashMap.put("date",date.toString());
+//
+//            hashMap.put("weight",weight.toString());
+//            hashMap.put("gander",gander.toString());
+//            hashMap.put("animal",animal.toString());
+//            hashMap.put("neutrality",neutrality.toString());
+//            hashMap.put("dateMonth",dateMonth.toString());
+//
+//            hashMap.put("allergy",allergy.toString());
+//            hashMap.put("hour",hour.toString());
+//            hashMap.put("allergy",allergy.toString());
+//
+//            var trueList : String = ""
+//            var trueCount = 0
+//            for(i: Int in 0..12 ){
+//                if(list_click[i]){
+//                    trueCount++
+//                    trueList += list[i].toString()
+//                    if(click_count > trueCount){
+//                        trueList += ","
+//                    }
+//                }
+//            }
+//            hashMap.put("trueList",trueList);
+//
+//            var serverAPI: ServerAPI = ServerAPI(7,hashMap);
+//            serverAPI.start();
+//            serverAPI.join();
 
             finishAffinity()
             val nextIntent = Intent(this, DogPage::class.java)

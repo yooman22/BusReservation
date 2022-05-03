@@ -53,4 +53,8 @@ class PrefsManager(context: Context) {
         return prefs.getInt(key, -1)
     }
 
+    fun getIntzero(key: String , value : Long) : Int {
+        return prefs.getInt(key, 0)
+    }
+
 }

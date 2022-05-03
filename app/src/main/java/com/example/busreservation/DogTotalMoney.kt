@@ -70,7 +70,7 @@ class DogTotalMoney : AppCompatActivity() {
             when(select)
             {
                 0-> {
-                    if(SharedPreference.prefs.getInt("expensive1",0) == 0)
+                    if(SharedPreference.prefs.getInt("expensive1",0) == -1)
                     {
                         SharedPreference.prefs.setInt("expensive1",edit_B.text.toString().toInt())
                     }else{
@@ -80,7 +80,7 @@ class DogTotalMoney : AppCompatActivity() {
                     }
                 }
                 1-> {
-                    if(SharedPreference.prefs.getInt("expensive2",0) == 0)
+                    if(SharedPreference.prefs.getInt("expensive2",0) == -1)
                     {
                         SharedPreference.prefs.setInt("expensive2",edit_B.text.toString().toInt())
                     }else{
@@ -90,7 +90,7 @@ class DogTotalMoney : AppCompatActivity() {
                     }
                 }
                 2-> {
-                    if(SharedPreference.prefs.getInt("expensive3",0) == 0)
+                    if(SharedPreference.prefs.getInt("expensive3",0) == -1)
                     {
                         SharedPreference.prefs.setInt("expensive3",edit_B.text.toString().toInt())
                     }else{
@@ -100,7 +100,7 @@ class DogTotalMoney : AppCompatActivity() {
                     }
                 }
                 3-> {
-                    if(SharedPreference.prefs.getInt("expensive4",0) == 0)
+                    if(SharedPreference.prefs.getInt("expensive4",0) == -1)
                     {
                         SharedPreference.prefs.setInt("expensive4",edit_B.text.toString().toInt())
                     }else{
@@ -110,7 +110,7 @@ class DogTotalMoney : AppCompatActivity() {
                     }
                 }
                 4-> {
-                    if(SharedPreference.prefs.getInt("expensive5",0) == 0)
+                    if(SharedPreference.prefs.getInt("expensive5",0) == -1)
                     {
                         SharedPreference.prefs.setInt("expensive5",edit_B.text.toString().toInt())
                     }else{
