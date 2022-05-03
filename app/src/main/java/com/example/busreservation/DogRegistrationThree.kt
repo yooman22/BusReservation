@@ -47,7 +47,7 @@ class DogRegistrationThree : AppCompatActivity() {
             SharedPreference.prefs.setInt("dateMonth",dateMonth)
             SharedPreference.prefs.setString("name",name!!)
             SharedPreference.prefs.setString("date",date!!)
-            SharedPreference.prefs.setString("weight",weight!!)
+            SharedPreference.prefs.setString("dog_weight",weight!!)
             SharedPreference.prefs.setBool("gander",gander)
             SharedPreference.prefs.setBool("animal",animal)
             SharedPreference.prefs.setBool("neutrality",neutrality)
