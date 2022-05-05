@@ -199,14 +199,16 @@ class DogPage : AppCompatActivity() {
         usaGdpSeries.data = GdpData(
             ArrayList(
                 Arrays.asList(
-                    GdpValue(2008, 14.719),
-                    GdpValue(2009, 14.419),
-                    GdpValue(2010, 14.964),
-                    GdpValue(2011, 15.518),
-                    GdpValue(2012, 16.155),
-                    GdpValue(2013, 16.692),
-                    GdpValue(2014, 17.393),
-                    GdpValue(2015, 18.037)
+                    GdpValue(1, 14.719),
+                    GdpValue(2, 14.419),
+                    GdpValue(3, 14.964),
+                    GdpValue(4, 15.518),
+                    GdpValue(5, 16.155),
+                    GdpValue(6, 16.692),
+                    GdpValue(7, 17.393),
+                    GdpValue(8, 18.037),
+                    GdpValue(9, 18.037),
+
                 )
             )
         )

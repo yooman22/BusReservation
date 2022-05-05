@@ -41,28 +41,28 @@ class Login : AppCompatActivity() {
 
         loginButton.setOnClickListener {
 
-//            var hashMap  = HashMap<String,String>()
-//
-//            hashMap.put("id",loginId.text.toString());
-//            hashMap.put("pwd",loginPwd.text.toString());
-//
-//            var serverAPI: ServerAPI = ServerAPI(2,hashMap)
-//            serverAPI.start();
-//            serverAPI.join();
-//
-//            val jsonObject = JSONObject(serverAPI.output);
-//            val id = jsonObject.getString("status")
-//
-//            if(id == "suc"){
-//                Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG).show()
-//                val nextIntent = Intent(this, Dog_Main::class.java)
-//                startActivity(nextIntent)
-//            }else{
-//                Toast.makeText(this, "로그인 실패", Toast.LENGTH_LONG).show()
-//            }
+            var hashMap  = HashMap<String,String>()
 
+            hashMap.put("id",loginId.text.toString());
+            hashMap.put("pwd",loginPwd.text.toString());
+
+            var serverAPI: ServerAPI = ServerAPI(2,hashMap)
+            serverAPI.start();
+            serverAPI.join();
+
+            val jsonObject = JSONObject(serverAPI.output);
+            val id = jsonObject.getString("status")
+
+            if(id == "suc"){
+                Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG).show()
                 val nextIntent = Intent(this, DogPage::class.java)
                 startActivity(nextIntent)
+            }else{
+                Toast.makeText(this, "로그인 실패", Toast.LENGTH_LONG).show()
+            }
+
+//                val nextIntent = Intent(this, DogPage::class.java)
+//                startActivity(nextIntent)
 
         }
 

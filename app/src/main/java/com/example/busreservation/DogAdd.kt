@@ -90,40 +90,6 @@ class DogAdd : AppCompatActivity() {
         multiAdapter.notifyDataSetChanged()
 
 
-
-        /*val api = RetrofitClient.getInstance().create(RetrofitService::class.java)
-        val callGetLogin = api.API_List("1")
-            .enqueue(object : Callback<ListVO> {
-                override fun onResponse(call: Call<ListVO>, response: Response<ListVO>) {
-                    Log.d("결과", "성공 : ${response.raw()}")
-                    Log.d("결과", "성공 : ${response.body()?.result}")
-                    response.body()?.let {
-                        datas1.add(DataItem("새로운 아이 등록하기","hello",0))
-
-                        for(i in it.result) {
-                            departure_id_txt.add(i.stationID)
-                            departure_name_txt.add(i.stationName)
-
-                            Log.d("결과", "성공 : " + i)
-                            datas1.add(DataItem(i.stationID,i.stationName,1))
-                        }
-
-                        multiAdapter.datas = datas1
-                        multiAdapter.notifyDataSetChanged()
-
-                    }
-
-                }
-                override fun onFailure(call: Call<ListVO>, t: Throwable) {
-
-                    Log.d("결과:", "실패 : $t")
-                }
-            })
-*/
-
-
-
-
         multiAdapter.setItemClickListener(object: Adapter.OnItemClickListener{
             override fun onClick(v: View, position: Int) {
 //                val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦

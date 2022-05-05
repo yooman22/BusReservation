@@ -64,6 +64,7 @@
             </TextView>
 
             <EditText
+                android:id="@+id/name_edit"
                 android:textColor="@color/black"
                 android:layout_marginLeft="24dp"
                 android:textSize="20dp"
@@ -86,6 +87,7 @@
             </TextView>
 
             <EditText
+                android:id="@+id/animal_edit"
                 android:textColor="@color/black"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="20dp"
@@ -108,6 +110,7 @@
             </TextView>
 
             <EditText
+                android:id="@+id/age_edit"
                 android:textColor="@color/black"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="20dp"
@@ -119,6 +122,7 @@
             </EditText>
 
             <TextView
+                android:id="@+id/weight"
                 android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:textSize="25dp"
@@ -135,6 +139,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
+                    android:id="@+id/weight_dog"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="24dp"
@@ -173,6 +178,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/man"
                     android:text="남자"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -186,6 +192,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/woman"
                     android:text="여자"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -217,6 +224,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/no"
                     android:text="안했어요"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -230,6 +238,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/yes"
                     android:text="했어요"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -261,6 +270,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/baby_yes"
                     android:text="네"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -274,6 +284,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/baby_no"
                     android:text="아니오"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -316,6 +327,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/btn_1"
                     android:text="알레르기"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -328,6 +340,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_2"
                     android:text="장"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -341,6 +354,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_3"
                     android:text="치아/구강"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -352,6 +366,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_4"
                     android:text="비만"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -365,6 +380,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_5"
                     android:text="뼈/관절"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -384,6 +400,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/btn_6"
                     android:text="피부/모질"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -396,6 +413,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_7"
                     android:text="노령"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
@@ -409,6 +427,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_8"
                     android:text="신장/요로"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -420,6 +439,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_9"
                     android:text="호흡기"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -433,6 +453,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_10"
                     android:text="심장"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -452,6 +473,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/btn_11"
                     android:text="당뇨"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -477,6 +499,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/btn_12"
                     android:text="행동"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -508,6 +531,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/allergy_yes"
                     android:text="네"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -521,6 +545,7 @@
                 </Button>
 
                 <Button
+                    android:id="@+id/allergy_no"
                     android:text="아니요"
                     android:textColor="@color/green"
                     android:textStyle="bold"
@@ -536,6 +561,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/save"
                 android:text="저장하기"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
