@@ -8,6 +8,7 @@ import android.view.View
 import com.devexpress.dxcharts.*
 import com.example.busreservation.data.GdpData
 import com.example.busreservation.data.GdpValue
+import kotlinx.android.synthetic.main.activity_dog_feed_item_info.view.*
 import kotlinx.android.synthetic.main.activity_dog_main.*
 import kotlinx.android.synthetic.main.activity_dog_page.*
 import java.text.SimpleDateFormat
@@ -70,7 +71,7 @@ class DogPage : AppCompatActivity() {
             txt_heart_date.setText( (heartDate / (24 * 60 * 60 * 1000)).toString() + "일전" )
         }
 
-        txt_weight.setText(SharedPreference.prefs.getString("dog_weight","-"))
+        txt_weight.setText(SharedPreference.prefs.getString("dog_weight","-") + "  Kg")
 
         var dateMonth = SharedPreference.prefs.getInt("dateMonth",0)
         if(dateMonth == -1){
@@ -80,6 +81,7 @@ class DogPage : AppCompatActivity() {
             dog_date.setText(dateMonth.toString() + " 개월")
             baby_age.setText((dateMonth*5/3).toString() + " 살")
         }
+
     }
 
 
@@ -88,11 +90,21 @@ class DogPage : AppCompatActivity() {
         setContentView(R.layout.activity_dog_page)
 
 
+
+        if(!SharedPreference.prefs.getBool("gander",false)) // 남자
+        {
+            gander_img.setImageResource(R.drawable.man_icon)
+        }else{
+            gander_img.setImageResource(R.drawable.woman_icon)
+        }
+
         val date = Date(now)
         var sdf : SimpleDateFormat = SimpleDateFormat("yyyy년 MM월 dd일");
         var sdf1 : SimpleDateFormat = SimpleDateFormat("yyyy년 MM월");
+        var sdf2 : SimpleDateFormat = SimpleDateFormat("dd");
         var getTime : String = sdf.format(date);
         var getTime1 : String = sdf1.format(date)
+        var getday : String = sdf2.format(date)
         
 
         current_date.setText(getTime)
@@ -129,12 +141,13 @@ class DogPage : AppCompatActivity() {
         if(SharedPreference.prefs.getBool("Save",false)){
             btn_list.visibility = View.VISIBLE
             registration.visibility = View.GONE
+            main_img_icon.setImageResource(R.drawable.mainicon)
         }else {
             btn_list.visibility = View.GONE
             registration.visibility = View.VISIBLE
         }
 
-        txt_weight.setText(SharedPreference.prefs.getString("dog_weight","-"))
+        txt_weight.setText(SharedPreference.prefs.getString("dog_weight","-") + "  Kg")
 
         if( SharedPreference.prefs.getBigInteger("showerDate",0) < 24 * 60 * 60 * 1000){
             txt_shower_date.setText("오늘")
@@ -196,22 +209,88 @@ class DogPage : AppCompatActivity() {
 
         val usaGdpSeries = LineSeries()
         usaGdpSeries.displayName = "뭄무게"
-        usaGdpSeries.data = GdpData(
-            ArrayList(
-                Arrays.asList(
-                    GdpValue(1, 14.719),
-                    GdpValue(2, 14.419),
-                    GdpValue(3, 14.964),
-                    GdpValue(4, 15.518),
-                    GdpValue(5, 16.155),
-                    GdpValue(6, 16.692),
-                    GdpValue(7, 17.393),
-                    GdpValue(8, 18.037),
-                    GdpValue(9, 18.037),
 
+        if(getday.toInt() >= 1 && getday.toInt() <= 7) {
+            usaGdpSeries.data = GdpData(
+                ArrayList(
+                    Arrays.asList(
+                        GdpValue(1, 14.719),
+                        GdpValue(2, 14.419),
+                        GdpValue(3, 14.964),
+                        GdpValue(4, 15.518),
+                        GdpValue(5, 16.155),
+                        GdpValue(6, 16.692),
+                        GdpValue(7, 17.393)
+
+                    )
                 )
             )
-        )
+        }
+
+        if(getday.toInt() >= 8 && getday.toInt() <= 14) {
+            usaGdpSeries.data = GdpData(
+                ArrayList(
+                    Arrays.asList(
+                        GdpValue(8, 14.719),
+                        GdpValue(9, 14.419),
+                        GdpValue(10, 14.964),
+                        GdpValue(11, 15.518),
+                        GdpValue(12, 16.155),
+                        GdpValue(13, 16.692),
+                        GdpValue(14, 17.393)
+
+                    )
+                )
+            )
+        }
+
+        if(getday.toInt() >= 15 && getday.toInt() <= 21) {
+            usaGdpSeries.data = GdpData(
+                ArrayList(
+                    Arrays.asList(
+                        GdpValue(15, 14.719),
+                        GdpValue(16, 14.419),
+                        GdpValue(17, 14.964),
+                        GdpValue(18, 15.518),
+                        GdpValue(19, 16.155),
+                        GdpValue(20, 16.692),
+                        GdpValue(21, 17.393)
+
+                    )
+                )
+            )
+        }
+
+        if(getday.toInt() >= 22 && getday.toInt() <= 28) {
+            usaGdpSeries.data = GdpData(
+                ArrayList(
+                    Arrays.asList(
+                        GdpValue(22, 14.719),
+                        GdpValue(23, 14.419),
+                        GdpValue(24, 14.964),
+                        GdpValue(25, 15.518),
+                        GdpValue(26, 16.155),
+                        GdpValue(27, 16.692),
+                        GdpValue(28, 17.393)
+
+                    )
+                )
+            )
+        }
+
+        if(getday.toInt() >= 29 && getday.toInt() <= 31) {
+            usaGdpSeries.data = GdpData(
+                ArrayList(
+                    Arrays.asList(
+                        GdpValue(29, 14.719),
+                        GdpValue(30, 14.419),
+                        GdpValue(31, 14.964)
+                    )
+                )
+            )
+        }
+
+
         chart.addSeries(usaGdpSeries)
 
 
