@@ -82,6 +82,8 @@ class DogPage : AppCompatActivity() {
             baby_age.setText((dateMonth*5/3).toString() + " 살")
         }
 
+        name.setText(SharedPreference.prefs.getString("name","두부"))
+
     }
 
 
@@ -89,7 +91,7 @@ class DogPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dog_page)
 
-
+        name.setText(SharedPreference.prefs.getString("name","두부"))
 
         if(!SharedPreference.prefs.getBool("gander",false)) // 남자
         {

@@ -61,8 +61,8 @@ class Login : AppCompatActivity() {
                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_LONG).show()
             }
 
-//                val nextIntent = Intent(this, DogPage::class.java)
-//                startActivity(nextIntent)
+                val nextIntent = Intent(this, DogPage::class.java)
+                startActivity(nextIntent)
 
         }
 
