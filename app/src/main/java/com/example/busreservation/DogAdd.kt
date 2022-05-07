@@ -67,7 +67,7 @@ class DogAdd : AppCompatActivity() {
         recyclerview_departure.layoutManager = viewManager
 
 
-        datas1.add(DataItem("새로운 아이 등록하기","hello",0))
+        datas1.add(DataItem("새로운 아이 등록하기","hello",0,false,"",""))
 
         for( i in 0 .. jsonArray.length()-1)
         {
@@ -83,7 +83,14 @@ class DogAdd : AppCompatActivity() {
             var age : String = jsonObject.getString("age")
             var walk : String = jsonObject.getString("walk")
 
-            datas1.add(DataItem(name,trueList,1))
+            if(gender == "false"){
+                datas1.add(DataItem(name,SharedPreference.prefs.getString("dog_type","말티즈"),1,false,dateMonth + " 개월" + weight + " kg",SharedPreference.prefs.getString("seek","")))
+            }
+            else {
+                datas1.add(DataItem(name,SharedPreference.prefs.getString("dog_type","말티즈"),1,true,dateMonth + " 개월" + weight + " kg",SharedPreference.prefs.getString("seek","")))
+            }
+
+
         }
 
         multiAdapter.datas = datas1

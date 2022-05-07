@@ -30,7 +30,7 @@ class DogRegistrationTwo : AppCompatActivity() {
 
         confirm1.setOnClickListener {
 
-            if(weight.getText().toString() == "" || dogName.getText().toString() == ""){
+            if(weight.getText().toString() == "" || dog_type.getText().toString() == ""){
                 Toast.makeText(getApplicationContext(),"미 입력 항목이 있습니다.", Toast.LENGTH_LONG).show()
             }else {
                 val nextIntent = Intent(this, DogRegistrationThree::class.java)
@@ -41,6 +41,7 @@ class DogRegistrationTwo : AppCompatActivity() {
                 nextIntent.putExtra("animal",dogcat) // true 강아지,false 고양이
                 nextIntent.putExtra("neutrality",yesno) // 중성화 yes , 중성화 no
                 nextIntent.putExtra("dateMonth",intent.getIntExtra("dateMonth",-1))
+                nextIntent.putExtra("dog_type",dog_type.getText().toString())
                 startActivity(nextIntent)
                 //finish()
             }
@@ -88,7 +89,7 @@ class DogRegistrationTwo : AppCompatActivity() {
                 val intent = result.data // Handle the Intent //do stuff here
 
                 var dogSelect = result.data!!.getStringExtra("dogselect")
-                dogName.setText(dogSelect)
+                dog_type.setText(dogSelect)
             }
         }
 

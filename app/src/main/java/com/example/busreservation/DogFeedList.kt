@@ -41,22 +41,22 @@ class DogFeedList : AppCompatActivity() {
 
 
         company.add("에이앤에프")
+        company.add("오리젠")
+        company.add("오가닉스토리")
         company.add("에이앤에프")
-        company.add("알파스피릿")
-        company.add("토스칸")
-        company.add("더독")
+        company.add("에이앤에프")
 
         item.add("유기농 6Free 연어")
-        item.add("램 홀리스틱 시니어")
-        item.add("닭고기와 강황 캔")
-        item.add("하베스트")
-        item.add("닥터소프트 양고기&감자")
+        item.add("6피쉬 독")
+        item.add("70% 유기농 가수분해 소고기")
+        item.add("95% 유기농 닭고기")
+        item.add("95% 유기농 양고기")
 
         price.add("12,000원")
-        price.add("9,000원")
-        price.add("4,000원")
-        price.add("20,000원")
-        price.add("19,900원")
+        price.add("25,000원")
+        price.add("59,000원")
+        price.add("28,000원")
+        price.add("40,700원")
 
         images.add(R.drawable.item1)
         images.add(R.drawable.item2)

@@ -183,7 +183,7 @@
     </RadioButton>
 
     <EditText
-        android:id="@+id/dogName"
+        android:id="@+id/dog_type"
         android:textColor="@color/black"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="20dp"

@@ -31,7 +31,8 @@ class DogRegistrationThree : AppCompatActivity() {
         var animal = intent.getBooleanExtra("animal",false) // true 강아지,false 고양이
         var neutrality = intent.getBooleanExtra("neutrality",false) // 중성화 yes , 중성화 no
         var dateMonth = intent.getIntExtra("dateMonth",-1) // 강아지 나이 측정 위해 저장
-        
+        var dog_type = intent.getStringExtra("dog_type")
+
         name_.setText(name)
         date_.setText(name+","+date)
 
@@ -51,6 +52,17 @@ class DogRegistrationThree : AppCompatActivity() {
             SharedPreference.prefs.setBool("gander",gander)
             SharedPreference.prefs.setBool("animal",animal)
             SharedPreference.prefs.setBool("neutrality",neutrality)
+
+            var seek = ""
+
+            for(i : Int in 0..12){
+                if(list_click[i]){
+                    seek += list[i] + " "
+                }
+            }
+
+            SharedPreference.prefs.setString("seek",seek)
+            SharedPreference.prefs.setString("dog_type",dog_type!!)
 
             var hashMap  = HashMap<String,String>()
 

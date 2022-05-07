@@ -58,13 +58,13 @@ class Destination : AppCompatActivity() {
                     Log.d("결과", "성공 : ${response.raw()}")
                     Log.d("결과", "성공 : ${response.body()?.result}")
                     response.body()?.let {
-                        datas1.add(DataItem("하이","hello",0))
+                        //datas1.add(DataItem("하이","hello",0))
 
                         for(i in it.result) {
                             destination_name_txt.add(i.stationName)
                             destination_id_txt.add(i.stationID)
                             Log.d("결과", "성공 : " + i)
-                            datas1.add(DataItem(i.stationID,i.stationName,1))
+                            //datas1.add(DataItem(i.stationID,i.stationName,1))
                         }
                         multiAdapter.datas = datas1
                         multiAdapter.notifyDataSetChanged()
@@ -82,8 +82,8 @@ class Destination : AppCompatActivity() {
         multiAdapter.setItemClickListener(object: Adapter.OnItemClickListener{
             override fun onClick(v: View, position: Int) {
                 val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
-                intent.putExtra("destination_data", datas1[position].title)
-                intent.putExtra("destination_data2", datas1[position].body)
+                //intent.putExtra("destination_data", datas1[position].title)
+                //intent.putExtra("destination_data2", datas1[position].body)
                 setResult(RESULT_OK, intent)
 
                 finish()
@@ -101,10 +101,10 @@ class Destination : AppCompatActivity() {
                 val datas1_copy = mutableListOf<DataItem>()
 
                 for(i in datas1) {
-                    if(i.title.contains(edit_txt1.text))
-                    {
-                        datas1_copy.add(i);
-                    }
+//                    if(i.title.contains(edit_txt1.text))
+//                    {
+//                        datas1_copy.add(i);
+//                    }
                 }
 
                 multiAdapter.datas = datas1_copy

@@ -58,14 +58,14 @@ class Departure : AppCompatActivity() {
                     Log.d("결과", "성공 : ${response.raw()}")
                     Log.d("결과", "성공 : ${response.body()?.result}")
                     response.body()?.let {
-                        datas1.add(DataItem("하이","hello",0))
+                        datas1.add(DataItem("하이","hello",0,false,"",""))
 
                         for(i in it.result) {
                             departure_id_txt.add(i.stationID)
                             departure_name_txt.add(i.stationName)
 
                             Log.d("결과", "성공 : " + i)
-                            datas1.add(DataItem(i.stationID,i.stationName,1))
+                            //datas1.add(DataItem(i.stationID,i.stationName,1))
                         }
 
                         multiAdapter.datas = datas1
@@ -88,8 +88,8 @@ class Departure : AppCompatActivity() {
                 override fun onClick(v: View, position: Int) {
                     val intent = Intent() //startActivity()를 할것이 아니므로 그냥 빈 인텐트로 만듦
 
-                    intent.putExtra("depature_data", datas1[position].title)
-                    intent.putExtra("depature_data2", datas1[position].body)
+                    //intent.putExtra("depature_data", datas1[position].title)
+                    //intent.putExtra("depature_data2", datas1[position].body)
                     setResult(AppCompatActivity.RESULT_OK, intent)
                     finish()
                 }
@@ -105,10 +105,10 @@ class Departure : AppCompatActivity() {
                     val datas1_copy = mutableListOf<DataItem>()
 
                     for(i in datas1) {
-                        if(i.title.contains(edit_txt.text))
-                        {
-                            datas1_copy.add(i);
-                        }
+//                        if(i.title.contains(edit_txt.text))
+//                        {
+//                            datas1_copy.add(i);
+//                        }
                     }
 
                     multiAdapter.datas = datas1_copy

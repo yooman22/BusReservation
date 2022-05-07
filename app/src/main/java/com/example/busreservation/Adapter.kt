@@ -12,6 +12,7 @@ import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
+import org.w3c.dom.Text
 import kotlin.math.cos
 
 class Adapter(private val context : Context) :
@@ -47,23 +48,37 @@ class Adapter(private val context : Context) :
         }
 
         fun bind(item: DataItem){
-            textView.text = item.title
-            textView2.text = item.body
+            textView.text = item.name
+            textView2.text = item.dog_type
         }
     }
 
     class MyViewHolder1(val view: View) : RecyclerView.ViewHolder(view){ // content 내용
         val textView: TextView
         val textView2 : TextView
+        val gander_img : ImageView
+        val date_kg : TextView
+        val seek : TextView
+
         init {
             // Define click listener for the ViewHolder's View.
             textView = view.findViewById(R.id.title)
-            textView2 = view.findViewById(R.id.body)
+            textView2 = view.findViewById(R.id.dog_type)
+            gander_img = view.findViewById(R.id.gander_icon)
+            date_kg = view.findViewById(R.id.date_kg)
+            seek = view.findViewById(R.id.seek)
         }
 
         fun bind(item: DataItem){
-            textView.text = item.title
-            textView2.text = item.body
+            textView.text = item.name
+            textView2.text = item.dog_type
+            if(!item.gander_icon){
+                gander_img.setImageResource(R.drawable.man_icon)
+            }else {
+                gander_img.setImageResource(R.drawable.woman_icon)
+            }
+            date_kg.text = item.date_kg
+            seek.text = item.seek
         }
     }
 
