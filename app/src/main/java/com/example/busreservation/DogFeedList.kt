@@ -78,14 +78,13 @@ class DogFeedList : AppCompatActivity() {
         multiAdapter.setItemClickListener(object: Adapter1.OnItemClickListener{
             override fun onClick(v: View, position: Int) {
 
-                if(position == 0){
                     val nextIntent = Intent(baseContext, DogFeedItemInfo::class.java)
                     nextIntent.putExtra("image",images[position])
                     nextIntent.putExtra("company",company[position])
                     nextIntent.putExtra("item",item[position])
                     nextIntent.putExtra("cost",item[position])
                     startActivity(nextIntent)
-                }
+
 
             }
         })
