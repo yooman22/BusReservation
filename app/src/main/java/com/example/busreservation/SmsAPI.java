@@ -28,15 +28,15 @@ public class SmsAPI extends Thread{
     }
 
     public void sendSMS() {
-        String api_key = "NCSP2Z3ZPYA8TBOX";
-        String api_secret = "RSBYPASY1VRUGCGHSSIESVIINSXRBSX2";
+        String api_key = "NCSODUO17V0I4D16";
+        String api_secret = "2KYWBLH5VAQARKKEZEUNMVEVR1LSD84A";
 
         Message coolsms = new Message(api_key, api_secret);
 
         // 4 params(to, from, type, text) are mandatory. must be filled
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("to", toPhoneNum);
-        params.put("from", "01058941451");
+        params.put("from", "01054151675");
         params.put("type", "SMS");
         authNum = randomGen();
         params.put("text", authNum);
