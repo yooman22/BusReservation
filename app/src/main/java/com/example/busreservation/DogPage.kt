@@ -84,6 +84,66 @@ class DogPage : AppCompatActivity() {
 
         name.setText(SharedPreference.prefs.getString("name","두부"))
 
+        val list_ = ArrayList<GdpValue>()
+        val date = Date(now)
+        var sdf2 : SimpleDateFormat = SimpleDateFormat("dd");
+        var getday : String = sdf2.format(date)
+        val usaGdpSeries = LineSeries()
+        usaGdpSeries.displayName = "뭄무게"
+
+        if(getday.toInt() >= 8 && getday.toInt() <= 14) {
+
+            var count = getday.toInt() - 8;
+
+            for(i : Int in 0 .. count){
+
+                if(i == count){
+                    list_.add(GdpValue(i+8, SharedPreference.prefs.getString("dog_weight","-").toDouble()))
+                    //Arrays.asList(GdpValue(i+8,SharedPreference.prefs.getString("dog_weight","-").toDouble() ))
+                    break;
+
+                }
+
+                var value : Double = (14 +i*0.125)
+                list_.add(GdpValue(i+8, value))
+                //Arrays.asList(GdpValue(i+8, value))
+            }
+
+            usaGdpSeries.data = GdpData(
+                ArrayList(
+                    list_
+                )
+            )
+        }
+
+        if(getday.toInt() >= 15 && getday.toInt() <= 21) {
+            var count = getday.toInt() - 15;
+
+            for(i : Int in 0 .. count){
+
+                if(i == count){
+                    list_.add(GdpValue(i+15, SharedPreference.prefs.getString("dog_weight","-").toDouble()))
+                    //Arrays.asList(GdpValue(i+8,SharedPreference.prefs.getString("dog_weight","-").toDouble() ))
+                    break;
+
+                }
+
+                var value : Double = (14 +i*0.125)
+                list_.add(GdpValue(i+15, value))
+                //Arrays.asList(GdpValue(i+8, value))
+            }
+
+            usaGdpSeries.data = GdpData(
+                ArrayList(
+                    list_
+                )
+            )
+        }
+
+        chart.removeAllSeries()
+
+        chart.addSeries(usaGdpSeries)
+
     }
 
 
@@ -212,6 +272,8 @@ class DogPage : AppCompatActivity() {
         val usaGdpSeries = LineSeries()
         usaGdpSeries.displayName = "뭄무게"
 
+        val list_ = ArrayList<GdpValue>()
+
         if(getday.toInt() >= 1 && getday.toInt() <= 7) {
             usaGdpSeries.data = GdpData(
                 ArrayList(
@@ -230,35 +292,50 @@ class DogPage : AppCompatActivity() {
         }
 
         if(getday.toInt() >= 8 && getday.toInt() <= 14) {
+
+            var count = getday.toInt() - 8;
+
+            for(i : Int in 0 .. count){
+
+                if(i == count){
+                    list_.add(GdpValue(i+8, SharedPreference.prefs.getString("dog_weight","-").toDouble()))
+                    //Arrays.asList(GdpValue(i+8,SharedPreference.prefs.getString("dog_weight","-").toDouble() ))
+                    break;
+
+                }
+
+                var value : Double = (14 +i*0.125)
+                list_.add(GdpValue(i+8, value))
+                //Arrays.asList(GdpValue(i+8, value))
+            }
+
             usaGdpSeries.data = GdpData(
                 ArrayList(
-                    Arrays.asList(
-                        GdpValue(8, 14.719),
-                        GdpValue(9, 14.419),
-                        GdpValue(10, 14.964),
-                        GdpValue(11, 15.518),
-                        GdpValue(12, 16.155),
-                        GdpValue(13, 16.692),
-                        GdpValue(14, 17.393)
-
-                    )
+                    list_
                 )
             )
         }
 
         if(getday.toInt() >= 15 && getday.toInt() <= 21) {
+            var count = getday.toInt() - 15;
+
+            for(i : Int in 0 .. count){
+
+                if(i == count){
+                    list_.add(GdpValue(i+15, SharedPreference.prefs.getString("dog_weight","-").toDouble()))
+                    //Arrays.asList(GdpValue(i+8,SharedPreference.prefs.getString("dog_weight","-").toDouble() ))
+                    break;
+
+                }
+
+                var value : Double = (14 +i*0.125)
+                list_.add(GdpValue(i+15, value))
+                //Arrays.asList(GdpValue(i+8, value))
+            }
+
             usaGdpSeries.data = GdpData(
                 ArrayList(
-                    Arrays.asList(
-                        GdpValue(15, 14.719),
-                        GdpValue(16, 14.419),
-                        GdpValue(17, 14.964),
-                        GdpValue(18, 15.518),
-                        GdpValue(19, 16.155),
-                        GdpValue(20, 16.692),
-                        GdpValue(21, 17.393)
-
-                    )
+                    list_
                 )
             )
         }
