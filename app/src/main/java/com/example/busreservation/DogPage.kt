@@ -98,7 +98,7 @@ class DogPage : AppCompatActivity() {
             for(i : Int in 0 .. count){
 
                 if(i == count){
-                    list_.add(GdpValue(i+8, SharedPreference.prefs.getString("dog_weight","-").toDouble()))
+                    list_.add(GdpValue(i+8, SharedPreference.prefs.getString("dog_weight","0").toDouble()))
                     //Arrays.asList(GdpValue(i+8,SharedPreference.prefs.getString("dog_weight","-").toDouble() ))
                     break;
 
@@ -122,7 +122,7 @@ class DogPage : AppCompatActivity() {
             for(i : Int in 0 .. count){
 
                 if(i == count){
-                    list_.add(GdpValue(i+15, SharedPreference.prefs.getString("dog_weight","-").toDouble()))
+                    list_.add(GdpValue(i+15, SharedPreference.prefs.getString("dog_weight","0").toDouble()))
                     //Arrays.asList(GdpValue(i+8,SharedPreference.prefs.getString("dog_weight","-").toDouble() ))
                     break;
 
@@ -298,7 +298,7 @@ class DogPage : AppCompatActivity() {
             for(i : Int in 0 .. count){
 
                 if(i == count){
-                    list_.add(GdpValue(i+8, SharedPreference.prefs.getString("dog_weight","-").toDouble()))
+                    list_.add(GdpValue(i+8, SharedPreference.prefs.getString("dog_weight","0").toDouble()))
                     //Arrays.asList(GdpValue(i+8,SharedPreference.prefs.getString("dog_weight","-").toDouble() ))
                     break;
 
@@ -322,7 +322,7 @@ class DogPage : AppCompatActivity() {
             for(i : Int in 0 .. count){
 
                 if(i == count){
-                    list_.add(GdpValue(i+15, SharedPreference.prefs.getString("dog_weight","-").toDouble()))
+                    list_.add(GdpValue(i+15, SharedPreference.prefs.getString("dog_weight","0").toDouble()))
                     //Arrays.asList(GdpValue(i+8,SharedPreference.prefs.getString("dog_weight","-").toDouble() ))
                     break;
 
