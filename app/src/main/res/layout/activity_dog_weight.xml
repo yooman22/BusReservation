@@ -23,7 +23,7 @@
 
         <ImageView
             android:layout_marginLeft="140dp"
-            android:src="@drawable/ideas"
+            android:src="@drawable/close_x"
             android:layout_width="40dp"
             android:layout_height="40dp">
         </ImageView>
