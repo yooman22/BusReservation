@@ -70,7 +70,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="170dp"
                         android:src="@drawable/ideas"
-                        android:text="두부"
+                        android:text=""
                         android:textSize="25dp"
                         android:textStyle="bold"></TextView>
 
