@@ -104,7 +104,7 @@ class DogPage : AppCompatActivity() {
 
                 }
 
-                var value : Double = (14 +i*0.125)
+                var value : Double = (3 +i*0.125)
                 list_.add(GdpValue(i+8, value))
                 //Arrays.asList(GdpValue(i+8, value))
             }
@@ -128,7 +128,7 @@ class DogPage : AppCompatActivity() {
 
                 }
 
-                var value : Double = (14 +i*0.125)
+                var value : Double = (3 +i*0.125)
                 list_.add(GdpValue(i+15, value))
                 //Arrays.asList(GdpValue(i+8, value))
             }
@@ -304,7 +304,7 @@ class DogPage : AppCompatActivity() {
 
                 }
 
-                var value : Double = (14 +i*0.125)
+                var value : Double = (3 +i*0.125)
                 list_.add(GdpValue(i+8, value))
                 //Arrays.asList(GdpValue(i+8, value))
             }
@@ -328,7 +328,7 @@ class DogPage : AppCompatActivity() {
 
                 }
 
-                var value : Double = (14 +i*0.125)
+                var value : Double = (3 +i*0.125)
                 list_.add(GdpValue(i+15, value))
                 //Arrays.asList(GdpValue(i+8, value))
             }
