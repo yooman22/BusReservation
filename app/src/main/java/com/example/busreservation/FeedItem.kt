@@ -5,5 +5,6 @@ data class FeedItem(
     val item : String ,
     val price : String,
     val image : Int,
-    val type : Int
+    val type : Int,
+    var url : String
 )

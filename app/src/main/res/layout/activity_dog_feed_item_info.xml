@@ -448,6 +448,7 @@
         </RelativeLayout>
 
         <Button
+            android:id="@+id/confirm_info"
             android:text="확인"
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
