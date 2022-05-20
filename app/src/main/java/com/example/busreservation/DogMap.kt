@@ -45,9 +45,11 @@ import android.widget.Toast
 import android.location.Geocoder
 import android.provider.Settings
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_dog_map.*
 import java.io.IOException
 import java.lang.IllegalArgumentException
 import java.util.*
+import kotlin.concurrent.timer
 
 class DogMap : AppCompatActivity(), OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -76,6 +78,11 @@ class DogMap : AppCompatActivity(), OnMapReadyCallback, ActivityCompat.OnRequest
 
     private var mLayout : View? = null
 
+    private var time = 0
+    private var timerTask : Timer? = null
+
+    var flag = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dog_map)
@@ -96,6 +103,41 @@ class DogMap : AppCompatActivity(), OnMapReadyCallback, ActivityCompat.OnRequest
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        bottom.setOnClickListener{
+
+            if(flag){
+                startRecord()
+            }else {
+                endRecord()
+            }
+        }
+
+    }
+
+    fun startRecord(){
+        flag = false
+        time = 0
+        timerTask = timer(period = 10){
+            time++
+            var min = time / 1000
+            var sec = time / 100
+            var milli = time % 100
+
+            runOnUiThread {
+                timer__.text = min.toString() + ":"+sec.toString() + ":" + milli
+            }
+        }
+
+        start.text = "산책종료"
+    }
+
+    fun endRecord(){
+        flag = true
+        timerTask?.cancel()
+        timerTask = null
+
+        start.text = "산책시작"
 
     }
 

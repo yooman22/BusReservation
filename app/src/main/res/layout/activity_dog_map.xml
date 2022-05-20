@@ -51,6 +51,19 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <TextView
+        android:id="@+id/timer__"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/green"
+        android:textSize="32dp"
+        android:text="시간"
+        app:layout_constraintLeft_toLeftOf="@id/bottom"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        >
+    </TextView>
+
     <androidx.appcompat.widget.Toolbar
         android:background="@color/red_"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,6 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp">
         <TextView
+            android:id="@+id/start"
             android:textAlignment="center"
             android:textSize="40dp"
             android:textColor="@color/white"
